@@ -1,0 +1,899 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 80%;
+    line-height: 1.3em;
+    color: #373723;
+}
+
+input, textarea {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.95em;
+    padding: 0.4em 0.6em;
+    color: #373723;
+}
+input {
+    vertical-align: middle;
+}
+
+/** link **/
+a, a:link {
+    color: #527017;
+    text-decoration: none;
+}
+#portal-columns a {
+    border-bottom: 1px dotted #bbb;
+}
+a:hover {
+    color: #000;
+}
+#portal-columns a:hover {
+    border-bottom-style: solid;
+}
+a:active {
+    color: #400;
+}
+a:focus {
+    outline:1px dotted;
+}
+a.moreLink,
+#portal-columns a.moreLink {
+    background-color: #727e18;
+    font-family: 'Francois One', Helvetica, Arial, sans-serif;
+    color: #FFF;
+    display: inline-block;
+    padding: 0.2em 0.6em 0.3em;
+    border:0;
+    font-size: 0.95em;
+}
+a.moreLink:hover,
+#portal-columns a.moreLink:hover {
+    background-color: #5a140c;
+}
+#portal-column-two a.moreLink,
+#portal-footer #footer-portlets a.moreLink {
+    background-color: #5a140c;
+    color: #FFF;
+}
+#portal-column-two a.moreLink:hover,
+#portal-footer #footer-portlets a.moreLink:hover {
+    background-color: #727e18;
+    color: #FFF;
+}
+
+/** layout **/
+p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset
+{
+    margin-bottom:0.3em;
+    padding:0;
+}
+hr {
+    border:0 #ccc dashed;
+    border-top-width:1px;
+    clear:both;
+    height:0;
+    margin: 1em 0;
+}
+.document_content hr {
+    margin: 2em 0;
+}
+
+hr.blocksSep {
+    background: transparent url(../images/border_sep.png) no-repeat left bottom;
+    height: 45px;
+    border:0;
+    margin: -1em 0 0.5em;
+}
+p {
+    line-height: 1.5em;
+}
+.visual_clear {
+    clear: both;
+}
+
+/** Headers styles **/
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: #000;
+    line-height: 1.6em;
+}
+h1,h2,h3 {
+    font-weight:normal;
+    color: #5a140c;
+    font-family: 'Francois One', Helvetica, Arial, sans-serif;
+}
+h1{
+    font-size:2em;
+    line-height: 1.4em;
+    margin-bottom: 0.3em;
+}
+h2{
+    font-size:1.6em;
+    line-height: 1.4em;
+    margin-bottom: 0.3em;
+}
+h3{
+    font-size:1.4em;
+    line-height: 1.4em;
+    margin-bottom: 0.6em;
+}
+h4{
+    line-height: 1.4em;
+    font-size:1.2em;
+    font-weight: normal;
+    margin-bottom: 0.7em;
+    color: #373723;
+    font-family: 'Francois One', Helvetica, Arial, sans-serif;
+}
+h5{
+    font-size:1em;
+    margin-bottom: 0.8em;
+}
+h6{
+    font-size:0.9em;
+    margin-bottom: 0.8em;
+}
+
+/** lists **/
+ol{list-style:decimal}
+ul{list-style:disc}
+li{margin-left:2em}
+.documentContent ul {
+    margin: 1em;
+}
+#portal-columns li {
+    list-style-image: url(../images/dot.png);
+    margin-bottom:0.5em;
+    line-height: 1.5em;
+}
+
+/*** PLONE invisibles styles ***/
+/* List classes without markers */
+ul.visualNoMarker,
+ol.visualNoMarker {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0.5em 0 0 0;
+}
+.visualOverflow {
+    overflow: auto;
+    margin: 0 0 1em 0;
+}
+.visualOverflow pre,
+.visualOverflow table,
+.visualOverflow img {
+    margin: 0;
+}
+/* Accessibility and visual enhancement elements */
+.hiddenStructure {
+   display: none;
+}
+.hiddenLabel {
+    display: block;
+    background: transparent;
+    background-image: none; /* safari bug */
+    border: none;
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    margin: -1px 0 0 -1px;
+    width: 1px;
+}
+.visualClear {
+    display: block;
+    clear: both;
+}
+
+/***** graphic layout ****/
+#body-wrapper {
+    background: #000 url(../images/bg_pattern_photo.png) repeat-x left top;
+}
+#visual-portal-wrapper {
+    background: transparent url(../images/bg_photo.jpg) no-repeat center top;
+}
+#portal-columns-wrapper {
+    background: transparent url(../images/bg_paper.jpg) repeat left top;
+    padding-bottom: 30px;
+}
+.borderPaper {
+    background: transparent url(../images/pattern_rough_border.png) repeat-x left top;
+    height: 12px;
+}
+#portal-columns {
+    background-color: #FFF;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: relative;
+    behavior: url(PIE.htc);
+    top: -40px;
+    padding: 10px 0;
+}
+#portal-column-content.grid_6 { /* with left and right column */
+    border-right: 1px solid #dedede;
+    border-left: 1px solid #dedede;
+    width: 338px;
+    padding: 0 10px;
+    margin:0;
+}
+#portal-column-content.grid_10 { /* with just right column */
+    border-right: 1px solid #dedede;
+    width: 579px;
+    padding-right: 10px;
+    margin-right: 0;
+}
+#portal-column-content.grid_12 { /* with just left column */
+    border-left: 1px solid #dedede;
+    width: 699px;
+    padding-left: 10px;
+    margin-left: 0;
+}
+#portal-header {
+    position: relative;
+    min-height: 110px;
+}
+
+/** personal-tools **/
+#portal-personaltools {
+    text-align: right;
+    padding-top: 3px;
+    margin:0;
+}
+#portal-personaltools li {
+    display: inline;
+    color: #7c746e;
+    font-size: 0.9em;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+#portal-personaltools li a {
+    color: #7c746e;
+}
+#portal-personaltools li.registerLink a {
+    color: #dedeb3;
+}
+#portal-personaltools li a:hover,
+#portal-personaltools li.registerLink a:hover {
+    color: #FFF;
+}
+
+/** logo **/
+#portal-logo {
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    margin:0;
+}
+#portal-logo a {
+    display: block;
+    width: 0;
+    height:0;
+    text-indent: -9999em;
+    padding-left: 209px;
+    padding-top: 96px;
+    background: transparent url(../images/logo_czytania.png) no-repeat left top;
+}
+
+/** portal tabs **/
+#sections-wrapper {
+    position: absolute;
+    right:0;
+    top: 35px;
+}
+#portal-globalnav {
+    float: left;
+}
+#portal-globalnav li {
+    float: left;
+    text-align: right;
+    margin-left: 3em;
+}
+#portal-globalnav li .tabLabel {
+    display: block;
+    color: #7c746e;
+    font-size: 0.9em;
+    padding-bottom: 0.6em;
+    font-family: 'Thabit', serif;
+}
+#portal-globalnav li a {
+    display: block;
+    color: #FFF;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+#portal-globalnav li a:hover {
+    color: #a6be20;    
+}
+#portal-globalnav li.selected a,
+#portal-globalnav li.selected a:hover {
+    color: #fbe9bb;
+    cursor: default;
+}
+
+/** portlet above **/
+#portlet-above {
+    padding: 20px 0;
+}
+
+/** sign up! **/
+#portlet-signup {
+    color: #FFF;
+}
+#portlet-signup h3 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 1.8em;
+    color: #FFF;
+    font-weight: bold;
+    margin:0 0 1em;
+}
+#portlet-signup h3 span {
+    color: #a6be20;  
+}
+.signupValues li {
+    margin:0.7em 0 0;
+    background-color: #dedeb3;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    color: #373723;
+    padding: 0.6em 1em;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    position: relative;
+    behavior: url(PIE.htc);
+}
+.signupValues li.value1 {
+    background-image: url(../images/dot1.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 54px;
+}
+.signupValues li.value2 {
+    background-image: url(../images/dot2.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 54px;
+}
+.signupValues li.registerNow {
+    padding:0;
+    background: #93a432 url(../images/btn_register_bg.png) no-repeat center top;
+}
+.signupValues li.registerNow a {
+    display: block;
+    color: #FFF;
+    text-align: center;
+    padding: 16px 0;
+    font-family: 'Francois One', Arial, sans-serif;
+    font-size: 1.7em;
+    text-shadow: -1px 0 #738411, 0 2px #738411, 1px 0 #738411, 0 -1px #738411;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    position: relative;
+    behavior: url(PIE.htc);
+}
+.signupValues li.registerNow a:hover {
+    background: #738411 none;
+}
+.registerNow .arrow {
+    display: inline-block;
+    width: 18px;
+    height: 27px;
+    vertical-align: middle;
+    background: transparent url(../images/arrow.png) no-repeat left top;
+}
+.loginLink {
+    padding-top: 1.5em;
+    text-align: right;
+}
+.loginLink a,
+.loginLink a:link {
+    color: #f2c76f;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.1em;
+    padding: 0.2em 0.5em;
+}
+.loginLink a:hover {
+    color: #FFF;
+    background-color: #727e18;    
+}
+
+/** PLONE portlet styles **/
+.portlet {
+    margin-bottom: 1.3em;
+}
+.portletHeader {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #5a140c;
+    padding-bottom: 0.6em;
+}    
+.portletHeader .tile,
+.portletHeader a.tile {
+    color: #5a140c;
+}
+.portletHeader a.tile:hover {
+    color: #527017;
+}
+.portletHeader .portletTip,
+.portletHeader .sepTip {
+    color: #888;
+    font-weight: normal;
+}
+.portletHeader .sepTip {
+    padding: 0 0.5em;
+}
+.portletFooter {
+    padding-top: 0.5em;
+}
+    
+/** homepage **/
+.portletIntroSC p {
+    margin-bottom: 1em;
+}
+.mapSC {
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    padding: 4px;
+    display: block;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    position: relative;
+    behavior: url(PIE.htc);
+}
+.mapSC-wrapper {
+    background: transparent url(../images/shadow_photo.jpg) no-repeat center bottom;
+    padding-bottom: 14px;
+}
+
+/** portlet news **/
+.portletCollectionNews .portletFooter {
+    clear: left;
+    min-height: 2em;
+}
+.itemCollection .itemPhoto {
+    float: left;
+    margin: 0 0.8em 0 0;
+}
+.itemCollection .itemContent {
+    padding-top: 0.5em;
+}
+
+/** portlet reviewers **/
+.itemCollection {
+    padding: 0.5em 0;
+}
+.itemCollection h6 {
+    font-size: 0.95em;
+    font-weight: normal;
+    line-height: 1.4em;
+    margin-bottom: 0.4em;
+}
+
+.portletCollectionNews .portletHeader,
+.portletCollectionReviewers .portletHeader,
+.portletCollectionMoreNews .portletHeader {
+    padding-bottom: 0;
+}
+.portletCollectionNews .portletFooter,
+.portletCollectionReviewers .portletFooter,
+.portletCollectionMoreNews .portletFooter {
+    padding-top: 0;
+}
+.portletCollectionReviewers .itemPhoto {
+    position: relative;
+    margin-bottom: 0.2em;
+}
+.portletCollectionReviewers .itemPhoto .moreLink {
+    position: absolute;
+    bottom:0;
+    right: 0;
+}
+.quote {
+    color: #888888;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    padding: 0.3em 0;
+}
+.leftQuote,
+.rightQuote {
+    background: transparent url(../images/sprites_quote.png) no-repeat left top;
+    width: 14px;
+    height: 13px;
+    display: inline-block;
+    margin: 0 0.5em 0.1em 0;
+}
+.rightQuote {
+    margin: 0.1em 0 0 0.5em;
+    background-position: left bottom;
+}
+.portletCollectionReviewers h4 {
+    font-size: 1em;
+    margin-top: 0.8em;
+}
+.portletCollectionReviewers .itemContent p {
+    font-size: 0.95em;
+}
+.portletCollectionReviewers .itemContent p.quote {
+    font-size: 1.1em;
+}
+.itemReview {
+    margin-bottom: 0.8em;
+}
+.itemReview h6 {
+    margin-bottom:0.3em;
+    font-weight: bold;
+}
+.itemAbstract {
+    font-size: 0.9em;
+    margin-bottom:0;
+}
+.itemData {
+    font-size: 0.9em;
+    color: #888;
+}
+
+/** portlet more news **/
+.portletCollectionMoreNews .itemCollection {
+    background: transparent url(../images/dot_grey.png) no-repeat left 0.7em;
+    padding-left: 18px;
+}
+a.tagLink {
+  color: #373723;
+  font-weight: bold;  
+}
+a.tagLink:hover {
+    color: #527017;
+}
+.itemData .sep {
+    color: #006b78;
+    font-size: 1.2em;
+    padding: 0 0.2em;
+}
+
+/** portlet reviews **/
+.portletCollectionReviews .itemPhoto {
+    float: left;
+    margin: 0.1em 1em 0 0;
+}
+.portletCollectionReviews .itemAuthor {
+    font-size: 0.85em;
+    text-transform: uppercase;
+}
+.portletCollectionReviews .itemReviewedBy {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+.portletCollectionReviews .itemCollection {
+    padding: 0.65em 0;
+}
+.portletCollectionReviews .itemCollection h6 {
+   font-size: 1em;
+   font-weight: bold;   
+}
+
+/** twitter **/
+#portlets-below {
+    position: relative;
+    top: -25px;
+}
+#portletTwitter,
+#portletTwitter h4 {
+    color: #7a716e;
+    margin:0;
+}
+#portletTwitter a {
+    color: #006b78;
+}
+#portletTwitter a:hover {
+    color: #5A140C;
+}
+#portletTwitter .twitterHeader {
+    margin: 0 10px 0 0;
+    width: 180px;
+    padding-top: 0.2em;
+    text-align: right;
+    background: transparent url(../images/ico_twitter.png) no-repeat right center;
+    padding-right: 50px;
+}
+#portletTwitter .twitterCloud {
+    width: 700px;
+    padding-left: 10px;
+    margin-right: 0;
+    font-size: 0.95em;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    background: transparent url(../images/twitter_cloud.png) no-repeat left center;
+}
+#portletTwitter .twitterCloud .tweet {
+    background: transparent url(../images/twitter_cloud_bg.png) repeat left top;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: relative;
+    behavior: url(PIE.htc);
+    padding: 0.2em 1em;
+}
+.followLink {
+    font-size: 0.9em;
+}
+
+/*** FOOTER ***/
+#portal-below-content {
+    background: #060405 url(../images/bg_gradient_footer.jpg) repeat-x center top;
+}
+#portal-footer-wrapper {
+    background: transparent url(../images/bg_photo_footer.jpg) no-repeat center top;
+}
+.borderFooter {
+    height: 0;
+    overflow: visible;
+    position: relative;
+}
+.borderFooter hr {
+    background: transparent url(../images/border_footer.png) repeat-x left top;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: -61px;
+    border:0;
+    z-index: 10;
+}
+#footer-portlets {
+    position: relative;
+    z-index: 20;
+}
+#footer-portlets .portletHeader {
+    padding-bottom: 1em;
+}
+#footer-portlets .portletHeader,
+#footer-portlets .portletHeader .tile,
+#footer-portlets .portletHeader a.tile {
+    font-family: 'Francois One', Helvetica, Arial, sans-serif;
+    color: #8ea23a;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+#portal-footer {
+    color: #c7c4bf;
+    padding-top: 2em;
+}
+#portal-footer a {
+    color: #f2c76f;
+    border:0;
+}
+#portal-footer a:hover {
+    color: #8ea23a;
+}
+
+/** calendar **/
+h4.calendarMonth {
+    color: #b0a89f;
+    font-family: 'Francois One', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 0.95em;
+    letter-spacing: 0.05em;
+    text-align: center;
+    position: relative;
+}
+h4.calendarMonth #calendar-previous {
+    position: absolute;
+    left:0;
+    top:0;
+}
+h4.calendarMonth #calendar-next {
+    position: absolute;
+    right:0;
+    top:0;
+}
+.ploneCalendar {
+    width: 100%;
+    text-transform: uppercase;
+    font-family: 'Francois One', Helvetica, Arial, sans-serif;
+    border-collapse:separate;
+    border-spacing: 4px;
+}
+.weekdays th {
+    background-color: #b0a89f;
+    color: #291f20;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+.ploneCalendar td {
+    padding: 4px 0 0;
+}
+.ploneCalendar td.event {
+    padding:0;
+}
+#portal-footer .ploneCalendar td.event a {
+    display: block;
+    background-color: #727e18;
+    color: #FFF;
+    padding: 4px 0 0;
+    text-align: center;
+    font-weight: normal;
+}
+#portal-footer .ploneCalendar td.event a:hover {
+    background-color:  #f2c76f;
+    color: #291f20;
+}
+
+/** Events **/
+#footer-portlets .portletCollectionEvents .portletHeader .tile {
+    display: none;
+}
+#footer-portlets .portletCollectionEvents,
+#footer-portlets .portletSearch {
+    background: transparent url(../images/footer_sep.png) no-repeat right top;
+    min-height: 200px;
+    margin-right:0;
+    padding-right: 10px;
+}
+#footer-portlets .portletCollectionEvents .portletHeader {
+    height: 1em;
+}
+#footer-portlets .portletCollectionEvents .portletItem {
+    font-size: 0.85em;
+}
+#footer-portlets .portletCollectionEvents .itemData {
+    font-family: 'Francois One', Helvetica, Arial, sans-serif;
+    color: #FFF;   
+    width: 6em;
+    padding-left: 1em;
+    float: left;
+}
+#footer-portlets .portletCollectionEvents h6 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline;
+}
+#footer-portlets .portletCollectionEvents .itemInfos {
+    display: inline;
+}
+#footer-portlets .portletCollectionEvents .itemContent {
+    margin-left: 7em;
+    padding:0;
+}
+#footer-portlets .portletCollectionEvents .portletFooter {
+    padding-top: 1.5em;
+}
+
+/** search **/
+#footer-portlets .portletSearch .portletItem {
+    font-size: 0.85em;
+} 
+#footer-portlets .portletSearch input.searchField,
+#footer-portlets .portletNewsletter input.newsletterField {
+    border: 1px solid #57544f;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    background-image: none;
+    color: #a2978a;
+    background-color: rgba(87, 84, 79, 0.4);
+    padding: 0.6em;
+    margin-right: 0.5em;
+    width: 150px;
+} 
+#footer-portlets .portletSearch input.searchButton {
+    width:0;
+    height:0;
+    border:0;
+    text-indent: -9999em;
+    background: transparent url(../images/btn_search.png) no-repeat left top;
+    padding: 14px; 
+    cursor: pointer;
+}
+#footer-portlets .portletSearch form,
+#footer-portlets .portletNewsletter form {
+    padding: 0.8em 0;
+}
+#footer-portlets .portletSearch p {
+    margin:0;
+}
+#footer-portlets .portletSearch .portletFooter {
+    padding-top: 1.5em;
+}
+
+/** newsletter **/
+#footer-portlets .portletNewsletter .portletItem {
+    font-size: 0.85em;
+}
+#footer-portlets .portletNewsletter input.newsletterField {
+    width: 110px;
+}
+#footer-portlets .portletNewsletter input.newsletterButton {
+    background: #727e18 none;
+    border:0;
+    color: #FFF;
+    font-family: 'Francois One', Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+     padding: 0.2em 0.3em 0.3em;
+}
+.contactUsText {
+    margin-top: 1em;
+    padding-top: 0.8em;
+    border-top: 1px dashed #57544f;
+}
+.contactUsText h4 {
+    color: #FFF;
+    font-size: 1.4em;
+    margin-bottom: 0.3em;
+}
+
+/** COLOPHON **/
+#portal-colophon {
+    border-top: 1px solid #3c3733;
+    padding: 1.4em 0;
+    font-size: 0.85em;
+}
+#portal-colophon .copyright {
+    background: transparent url(../images/logo_mini.png) no-repeat left center;
+    padding-left: 110px;
+    width: 350px;
+    margin-left:0;
+    margin-right: 20px;
+    font-size: 1.1em;
+}
+
+/* socials */
+.socials {
+    margin-top: -0.3em;
+}
+a.followFB,
+a.followTW {
+    display: inline-block;
+    width:0;
+    height:0;
+    text-indent: -9999em;
+    padding: 12px;
+    cursor: pointer;
+    margin: 0 0 0 0.6em;
+    vertical-align: middle;
+}
+a.followFB {
+    background: transparent url(../images/ico_fb.png) no-repeat left top;
+}
+a.followTW {
+    background: transparent url(../images/ico_tw.png) no-repeat left top;
+}
+
+/* site actions */
+#portal-colophon .siteActions {
+    margin-right: 0;
+    margin-left: 20px;
+}
+#portal-siteactions {
+    text-align: right;
+    margin:0;
+    font-size: 0.95em;
+}
+#portal-siteactions li {
+    display: inline;
+    margin:0;
+    padding: 0 0.5em 0 0.8em;
+    border-left: 1px solid #c7c4bf;
+}
+#portal-siteactions li#siteaction-home {
+    border:0;
+}
+#portal-siteactions li a {
+    color: #c7c4bf;
+    border-bottom: 1px dotted #c7c4bf;
+}
+#portal-siteactions li a:hover {
+    color: #f2c76f;
+    border-bottom-style: solid;
+}

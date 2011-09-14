@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    css:if-content="#visual-portal-wrapper">
+
+    <theme href="index.html" />
+
+    <notheme if-path="presentation_view"/>
+    <notheme if-path="source_editor.htm"/>
+    <notheme if-path="ploneimage.htm"/>
+    <notheme if-path="anchor.htm"/>
+    <notheme if-path="table.htm"/>
+    <notheme if-path="attributes.htm"/>
+
+    <replace theme="/html/head/title" content="/html/head/title"/>
+    <replace theme="/html/head/base" content="/html/head/base" />
+
+    <!-- add only plone javascript -->
+    <append theme='/html/head' content='/html/head/script'/>
+
+    <copy attributes="class" css:content="body" css:theme="body"/>
+    <copy attributes="id dir" css:content="body" css:theme="body"/>
+
+    <!-- Logo (link target) -->
+    <copy attributes="href title" css:content='#portal-logo' css:theme="#portal-logo a" />
+
+    <!-- login form BBB -->
+    <copy attributes="href" content='//*[@id="personaltools-login"]' theme="/html/body/div/div/div/div/div[2]/ul/li[1]/a" />
+    <copy attributes="href" content='//*[@id="personaltools-login"]' css:theme="p.loginLink a" />
+
+    <!-- globalnav -->
+    <copy content='//*[@id="portal-globalnav"]' theme='//*[@id="portal-globalnav"]' />
+    <replace css:content="#portal-globalnav li">
+        <xsl:for-each css:select="li">
+          <li><xsl:copy-of select="./@*" />
+              <span class="tabLabel">.<xsl:copy-of select="a/text()"/></span>
+              <xsl:copy-of select="a"/>
+          </li>
+        </xsl:for-each>
+    </replace>
+
+    <!-- book search form -->
+    <replace content='//*[@name="searchform"]' theme='//*[@id="livesearch0"]' />
+
+    <copy attributes="href" content='//*[@rel="search"]' css:theme="dl.portletSearch a.moreLink" />
+    <!--
+    <drop css:theme="#content div"/>
+    <before css:theme-children="#page" css:content="#viewlet-above-content"/>
+    <before css:theme-children="#page" css:content="#edit-bar"/>
+    <append css:theme="#content" css:content-children="#content"/>
+    <append css:theme="#content" css:content="#viewlet-below-content"/>
+
+    <drop css:theme="#sidebar ul"/>
+    <append css:content="#portal-column-one .portletWrapper" css:theme="#sidebar"/>
+    <append css:content="#portal-column-one .managePortletsLink" css:theme="#sidebar"/>
+    <append css:content="#portletmanager-plone-leftcolumn" css:theme="#sidebar"/>
+    <append css:content="#portlet-prefs" css:theme="#sidebar"/>
+
+    <drop css:content=".portletTopLeft" />
+    <drop css:content=".portletTopRight" />
+    -->
+
+</rules>
