@@ -79,7 +79,8 @@ hr {
 
 hr.blocksSep {
     background: transparent url(../images/border_sep.png) no-repeat left bottom;
-    height: 45px;
+    height: 0;
+    padding-top: 45px;
     border:0;
     margin: -1em 0 0.5em;
 }
@@ -204,7 +205,7 @@ ol.visualNoMarker {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     position: relative;
-    behavior: url(PIE.htc);
+    behavior: url(css/PIE.htc);
     top: -40px;
     padding: 10px 0;
 }
@@ -340,7 +341,7 @@ ol.visualNoMarker {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     position: relative;
-    behavior: url(PIE.htc);
+    behavior: url(css/PIE.htc);
 }
 .signupValues li.value1 {
     background-image: url(../images/dot1.png);
@@ -370,7 +371,7 @@ ol.visualNoMarker {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     position: relative;
-    behavior: url(PIE.htc);
+    behavior: url(css/PIE.htc);
 }
 .signupValues li.registerNow a:hover {
     background: #738411 none;
@@ -442,7 +443,7 @@ ol.visualNoMarker {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     position: relative;
-    behavior: url(PIE.htc);
+    behavior: url(css/PIE.htc);
 }
 .mapSC-wrapper {
     background: transparent url(../images/shadow_photo.jpg) no-repeat center bottom;
@@ -620,7 +621,7 @@ a.tagLink:hover {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     position: relative;
-    behavior: url(PIE.htc);
+    behavior: url(css/PIE.htc);
     padding: 0.2em 1em;
 }
 .followLink {
@@ -644,9 +645,12 @@ a.tagLink:hover {
     height: 100px;
     width: 100%;
     position: absolute;
-    top: -61px;
+    top: -75px;
     border:0;
     z-index: 10;
+}
+*:first-child+html .borderFooter  {
+    display: none;
 }
 #footer-portlets {
     position: relative;
@@ -782,6 +786,7 @@ h4.calendarMonth #calendar-next {
     -moz-border-radius: 3px;
     background-image: none;
     color: #a2978a;
+    background-color: rgb(17, 13, 12);
     background-color: rgba(87, 84, 79, 0.4);
     padding: 0.6em;
     margin-right: 0.5em;
@@ -834,7 +839,8 @@ h4.calendarMonth #calendar-next {
 }
 
 /** COLOPHON **/
-#portal-colophon {
+#portal-colophon,
+#logo-partners {
     border-top: 1px solid #3c3733;
     padding: 1.4em 0;
     font-size: 0.85em;
@@ -896,4 +902,156 @@ a.followTW {
 #portal-siteactions li a:hover {
     color: #f2c76f;
     border-bottom-style: solid;
+}
+
+/** Logos **/
+#logo-partners {
+    text-align: center;
+}
+a.logos {
+    display: inline-block;
+    margin: 0 3px;
+    vertical-align: middle;
+}
+a.logoB img {
+    padding: 2px;
+    border: 1px solid #3c3733;
+}
+
+
+/*********** carousel *************/
+#carousel-wrapper {
+    position: relative;
+    min-height: 330px;
+}
+#carousel {
+    position:relative;
+    overflow:hidden;
+    padding-top: 10px;
+    height:300px;    
+}
+#carousel .items {
+    width:20000em;
+    position:absolute;
+    clear:both;
+    margin:0;
+    padding:0;
+}
+.bookCarousel {
+    float: left; 
+    width: 640px;   
+}
+/** nav carousel **/
+#nav-carousel {
+    padding: 0.3em 0;
+    position: absolute;
+    right:0;
+    bottom: 20px;
+}
+#nav-carousel a {
+    display: inline-block;
+    background-color: #fbe9bb;
+    color: #500f03;
+    text-align: center;
+    width: 1.6em;
+    padding:0.2em 0;
+    margin: 0 0.4em;
+}
+#nav-carousel a.active {
+    background-color: #500f03;
+    color: #FFF;
+}
+/* carousel content */
+.bookCover {
+    float: left;
+    padding: 10px;
+    max-width: 182px;
+    background: transparent url(../images/bg_carousel.png) repeat left top;
+}
+.bookCover a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #858383;
+}
+.bookCover a:hover {
+    border-color: #FFF;
+}
+.bookDetails {
+   margin: 0 2px 0 220px;
+    background: transparent url(../images/bg_carousel_talk.png) repeat-x left bottom;
+    color: #FFF;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -moz-box-shadow: 0 0 2px #FFF;
+    -webkit-box-shadow: 0 0 2px #FFF;
+    box-shadow: 0 0 2px #FFF;
+    position: relative;
+    padding: 6px 10px 10px;
+}
+.bookClipTalk {
+    position: absolute;
+    width: 18px;
+    height: 19px;
+    background: transparent url(../images/carousel_talk_clip_2.png) no-repeat left top;
+    top: 20px;
+    left: -18px;
+}
+h6.bookAuthor {
+   color: #f5d698;
+   font-family: 'Lato', Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-size: 1.2em;
+   margin-bottom: 0.2em;
+   position: relative;
+   padding-left: 22px;
+}
+.feather {
+    position: absolute;
+    bottom: 5px;
+    left:0;
+    width: 21px;
+    height: 36px;
+    background: transparent url(../images/ico_feather.png) no-repeat left top;
+}
+h4.bookTitle {
+    color: #ebe5d8;
+    font-family: 'Francois One', Helvetica, Arial, sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 0.2em;
+}
+.bookDescription {
+    color: #e3e0c1;
+    max-height: 120px;
+    overflow: auto;
+}
+.bookMore {
+    font-size: 1.1em;
+    padding: 0.5em 0;
+}
+.bookActions {
+    text-align: right;
+    color: #b4aaa2;
+}
+.bookActions a {
+    color: #b4aaa2;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0.1em 0;
+}
+.bookActions a:hover {
+    color: #FFF;
+}
+.bookActions a.reviewsLink {
+    background: transparent url(../images/ico_talks.png) no-repeat left top;
+    padding-left: 30px;
+}
+.bookActions a.suggestLink {
+    padding-left: 20px;
+    background: transparent url(../images/ico_star.png) no-repeat left top;
+}
+.bookActions .sep {
+    padding: 0 1em;
 }

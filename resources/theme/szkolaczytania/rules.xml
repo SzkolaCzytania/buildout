@@ -5,7 +5,8 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     css:if-content="#visual-portal-wrapper">
 
-    <theme href="index.html" />
+    <theme href="home.html" css:if-content="body.section-front-page"/>
+    <theme href="index.html"/>
 
     <notheme if-path="presentation_view"/>
     <notheme if-path="source_editor.htm"/>
@@ -26,9 +27,9 @@
     <!-- Logo (link target) -->
     <copy attributes="href title" css:content='#portal-logo' css:theme="#portal-logo a" />
 
-    <!-- login form BBB -->
+    <!-- login form -->
     <copy attributes="href" content='//*[@id="personaltools-login"]' theme="/html/body/div/div/div/div/div[2]/ul/li[1]/a" />
-    <copy attributes="href" content='//*[@id="personaltools-login"]' css:theme="p.loginLink a" />
+    <copy attributes="href" content='//*[@id="personaltools-login"]' theme="/html/body/div/div/div/div[2]/div[2]/p/a" />
 
     <!-- globalnav -->
     <copy content='//*[@id="portal-globalnav"]' theme='//*[@id="portal-globalnav"]' />
@@ -43,8 +44,19 @@
 
     <!-- book search form -->
     <replace content='//*[@name="searchform"]' theme='//*[@id="livesearch0"]' />
-
     <copy attributes="href" content='//*[@rel="search"]' css:theme="dl.portletSearch a.moreLink" />
+
+    <!-- right portlets -->
+    <replace css:content="div.portletWrapper">
+        <xsl:for-each css:select="div">
+            <xsl:copy-of select="." />
+	    <hr class="blocksSep" />
+        </xsl:for-each>
+    </replace>
+    <copy content-children='//*[@id="portal-column-two"]' theme='//*[@id="portal-column-two"]' />
+
+    <!-- center column -->
+    <copy content-children='//*[@id="portal-column-content"]' theme='//*[@id="portal-column-content"]' />
     <!--
     <drop css:theme="#content div"/>
     <before css:theme-children="#page" css:content="#viewlet-above-content"/>
