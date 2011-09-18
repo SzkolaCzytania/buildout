@@ -19,7 +19,7 @@
     <replace theme="/html/head/base" content="/html/head/base" />
 
     <!-- add only plone javascript -->
-    <append theme='/html/head' content='/html/head/script'/>
+    <!--    <append theme='/html/head' content='/html/head/script'/>-->
 
     <copy attributes="class" css:content="body" css:theme="body"/>
     <copy attributes="id dir" css:content="body" css:theme="body"/>
@@ -57,6 +57,9 @@
 
     <!-- center column -->
     <copy content-children='//*[@id="portal-column-content"]' theme='//*[@id="portal-column-content"]' />
+
+    <!-- site actions -->
+    <copy content-children='//*[@id="portal-siteactions"]' theme='//*[@id="portal-siteactions"]' />
     <!--
     <drop css:theme="#content div"/>
     <before css:theme-children="#page" css:content="#viewlet-above-content"/>
