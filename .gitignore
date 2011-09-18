@@ -6,3 +6,4 @@ eggs
 .mr.developer.cfg
 lib
 include
+src/*

@@ -14,7 +14,6 @@
     <notheme if-path="anchor.htm"/>
     <notheme if-path="table.htm"/>
     <notheme if-path="attributes.htm"/>
-    <notheme css:if-content="div.documentEditable"/>
 
     <replace theme="/html/head/title" content="/html/head/title"/>
     <replace theme="/html/head/base" content="/html/head/base" />
@@ -22,15 +21,14 @@
     <!-- add only plone javascript -->
     <!--    <append theme='/html/head' content='/html/head/script'/>-->
 
+    <!-- for cmsui -->
+    <before css:theme-children="body" css:content="#plone-cmsui-trigger" />
+
     <copy attributes="class" css:content="body" css:theme="body"/>
     <copy attributes="id dir" css:content="body" css:theme="body"/>
 
     <!-- Logo (link target) -->
     <copy attributes="href title" css:content='#portal-logo' css:theme="#portal-logo a" />
-
-    <!-- login form -->
-    <copy attributes="href" content='//*[@id="personaltools-login"]' theme="/html/body/div/div/div/div/div[2]/ul/li[1]/a" />
-    <copy attributes="href" content='//*[@id="personaltools-login"]' theme="/html/body/div/div/div/div[2]/div[2]/p/a" />
 
     <!-- globalnav -->
     <copy content='//*[@id="portal-globalnav"]' theme='//*[@id="portal-globalnav"]' />
