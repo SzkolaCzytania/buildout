@@ -1,0 +1,111 @@
+html {
+    height: 100%;
+    background: transparent url(../images/bg_paper.jpg) repeat left top;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: transparent url(../images/img_landing.png) no-repeat center 200px;
+    font-size: 80%;
+    line-height: 1.3em;
+    color: #373723;
+}
+
+/** link **/
+a, a:link {
+    color: #527017;
+    text-decoration: none;
+}
+a:hover {
+    color: #000;
+}
+a:active {
+    color: #400;
+}
+a:focus {
+    outline:1px dotted;
+}
+
+/** layout **/
+p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset
+{
+    margin-bottom:0.3em;
+    padding:0;
+}
+/** Headers styles **/
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: #fff;
+    line-height: 1.6em;
+    font-weight:normal;
+    font-family: 'Francois One', Helvetica, Arial, sans-serif;
+}
+h1{
+    font-size:2em;
+    line-height: 1.4em;
+    margin-bottom: 0.3em;
+}
+h2{
+    font-size:2.6em;
+    color: #A6BE20;
+    line-height: 1.6em;
+    margin: 0.5em 0 0.3em;
+}
+h3{
+    font-size:1.4em;
+    line-height: 1.4em;
+    margin-bottom: 0.6em;
+}
+h4{
+    line-height: 1.8em;
+    font-size:1.4em;
+    margin-bottom: 0.7em;
+    color: #EBE5D8;
+    font-family: 'Francois One', Helvetica, Arial, sans-serif;
+}
+h5{
+    font-size:1em;
+    margin-bottom: 0.8em;
+}
+h6{
+    font-size:0.9em;
+    margin-bottom: 0.8em;
+}
+
+.visualClear {
+    display: block;
+    clear: both;
+}
+
+/***** graphic layout ****/
+
+#body-wrapper {
+    padding: 30px;
+}
+#portal-top {
+    min-height: 400px;
+    text-align: center;
+}
+
+/** logo **/
+#portal-logo {
+    margin:0 auto;
+    text-indent: -9999em;
+    width: 250px;
+    height: 130px;
+    background: transparent url(../images/logo_landing.png) no-repeat left top;
+}
+
+#content {
+    margin: 100px auto 0;
+    width: 433px;
+}
+#content .pres {
+    min-height: 210px;    
+}
+#contact {
+    font-size: 0.9em;    
+}
+.copyright {
+    margin: 2em 0;
+}
