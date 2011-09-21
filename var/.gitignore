@@ -1,0 +1,5 @@
+blobstorage
+filestorage
+instance.lock
+instance.pid
+log
