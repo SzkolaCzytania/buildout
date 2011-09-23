@@ -5,7 +5,7 @@ html {
 
 body {
     font-family: Helvetica, Arial, sans-serif;
-    background: transparent url(../images/img_landing.png) no-repeat center 200px;
+/*    background: transparent url(../images/img_landing.png) no-repeat center 200px;*/
     font-size: 80%;
     line-height: 1.3em;
     color: #373723;
@@ -60,7 +60,7 @@ h4{
     line-height: 1.8em;
     font-size:1.4em;
     margin-bottom: 0.7em;
-    color: #EBE5D8;
+    color: #373723;
     font-family: 'Francois One', Helvetica, Arial, sans-serif;
 }
 h5{
@@ -98,7 +98,7 @@ h6{
 
 #content {
     margin: 100px auto 0;
-    width: 433px;
+    width: 633px;
 }
 #content .pres {
     min-height: 210px;    
