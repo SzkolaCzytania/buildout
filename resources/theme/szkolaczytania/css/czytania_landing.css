@@ -47,9 +47,10 @@ h1{
 }
 h2{
     font-size:2.6em;
-    color: #A6BE20;
+    color: #173962;
     line-height: 1.6em;
     margin: 0.5em 0 0.3em;
+    text-align: center;
 }
 h3{
     font-size:1.4em;
@@ -97,15 +98,29 @@ h6{
 }
 
 #content {
-    margin: 100px auto 0;
+    margin: 25px auto 0;
     width: 633px;
 }
 #content .pres {
     min-height: 210px;    
 }
 #contact {
-    font-size: 0.9em;    
+    font-size: 0.9em;   
+    margin: 2em;
+    padding: 1em 0;
+    border-top: 1px dashed  #79746e;
+    border-bottom: 1px dashed  #79746e;
 }
 .copyright {
     margin: 2em 0;
+}
+#content .pres p {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    text-align: center;
+    margin: 0.5em 0 0.8em;
+}
+#content .pres p i {
+    font-weight: bold;
 }
