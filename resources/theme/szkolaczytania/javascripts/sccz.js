@@ -10,4 +10,12 @@ $(function() {
 		interval: 5000,
 		autopause: true		
 	});
+	
+	// initialize scrollable mini
+	$("#carousel-mini").scrollable({
+		circular: true
+		}).autoscroll({
+		interval: 5000,
+		autopause: true		
+	});	
 });

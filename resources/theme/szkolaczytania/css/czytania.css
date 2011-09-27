@@ -924,13 +924,26 @@ a.logoB img {
     position: relative;
     min-height: 330px;
 }
+#carousel-wrapper-mini {
+    position: relative;
+    min-height: 160px;
+}
 #carousel {
     position:relative;
     overflow:hidden;
     padding-top: 10px;
     height:300px;    
 }
-#carousel .items {
+#carousel-mini {
+    position:relative;
+    overflow:hidden;
+    padding-top: 10px;
+    height:140px;   
+    width: 910px; 
+    margin: 0 20px 0 30px;
+}
+#carousel .items,
+#carousel-mini .items {
     width:20000em;
     position:absolute;
     clear:both;
@@ -941,6 +954,20 @@ a.logoB img {
     float: left; 
     width: 640px;   
 }
+#carousel-mini .bookCarousel {
+    width: 280px;
+    background: transparent url(../images/bg_carousel.png) repeat left top;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -moz-box-shadow: 0 0 2px #FFF;
+    -webkit-box-shadow: 0 0 2px #FFF;
+    box-shadow: 0 0 2px #FFF;
+    position: relative;
+    margin: 0 12px 0 2px;
+    padding: 5px;
+    height:122px;
+} 
 /** nav carousel **/
 #nav-carousel {
     padding: 0.3em 0;
@@ -961,6 +988,25 @@ a.logoB img {
     background-color: #500f03;
     color: #FFF;
 }
+#carousel-wrapper-mini a.browse {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 27px;
+    top: 65px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+#carousel-wrapper-mini a.prev {
+    background-image: url(../images/carousel_nav_prev.png);
+    left:0;
+} 
+#carousel-wrapper-mini a.next {
+    background-image: url(../images/carousel_nav_next.png);
+    right:0;
+} 
 /* carousel content */
 .bookCover {
     float: left;
@@ -968,17 +1014,26 @@ a.logoB img {
     max-width: 182px;
     background: transparent url(../images/bg_carousel.png) repeat left top;
 }
+#carousel-mini .bookCover {
+    width: 78px;
+    float: left;
+    padding: 0;
+    height: 120px;
+}
 .bookCover a {
     display: block;
     width: 100%;
     overflow: hidden;
     border: 1px solid #858383;
 }
+#carousel-mini .bookCover a {
+    height: 100%;
+}
 .bookCover a:hover {
     border-color: #FFF;
 }
 .bookDetails {
-   margin: 0 2px 0 220px;
+    margin: 0 2px 0 220px;
     background: transparent url(../images/bg_carousel_talk.png) repeat-x left bottom;
     color: #FFF;
     border-radius: 3px;
@@ -989,6 +1044,19 @@ a.logoB img {
     box-shadow: 0 0 2px #FFF;
     position: relative;
     padding: 6px 10px 10px;
+}
+#carousel-mini .bookDetails {
+    margin: 0 2px 0 90px;
+    color: #FFF;
+    padding: 0 0 0;    
+    font-size: 0.8em;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -moz-box-shadow: 0 0 0;
+    -webkit-box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
+    height: 100%;
 }
 .bookClipTalk {
     position: absolute;
@@ -1007,6 +1075,10 @@ h6.bookAuthor {
    position: relative;
    padding-left: 22px;
 }
+#carousel-mini h6.bookAuthor {
+    padding-left:0;
+    font-size: 1.3em;
+}
 .feather {
     position: absolute;
     bottom: 5px;
@@ -1021,6 +1093,9 @@ h4.bookTitle {
     font-size: 1.8em;
     margin-bottom: 0.2em;
 }
+#carousel-mini h4.bookTitle {
+    font-size: 1.6em;
+} 
 .bookDescription {
     color: #e3e0c1;
     max-height: 120px;
@@ -1030,9 +1105,18 @@ h4.bookTitle {
     font-size: 1.1em;
     padding: 0.5em 0;
 }
+#carousel-mini .bookMore {
+    font-size: 1.3em;
+    position: absolute;
+    bottom: 0px;
+    left:0;
+}
 .bookActions {
     text-align: right;
     color: #b4aaa2;
+}
+#carousel-mini .bookActions {
+    text-align: left;
 }
 .bookActions a {
     color: #b4aaa2;
@@ -1048,10 +1132,38 @@ h4.bookTitle {
     background: transparent url(../images/ico_talks.png) no-repeat left top;
     padding-left: 30px;
 }
+#carousel-mini .bookActions  a.reviewsLink {
+    padding-left: 0;
+    background: transparent none;
+    font-size: 1em;
+}
 .bookActions a.suggestLink {
     padding-left: 20px;
     background: transparent url(../images/ico_star.png) no-repeat left top;
 }
 .bookActions .sep {
     padding: 0 1em;
+}
+
+/** breadcrumbs **/
+#portal-breadcrumbs {
+    margin-top: 10px;
+    position: relative;
+    top: -33px;
+    background: transparent url(../images/bg_breadcrumbs.png) repeat left top;
+    font-size: 0.85em;
+    padding: 0.5em 10px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    color: #fbe9bb;
+}
+#portal-breadcrumbs a {
+    color: #FFF;
+}
+#portal-breadcrumbs a:hover {
+    border-bottom: 1px dotted #EEE;
+}
+#portal-breadcrumbs .breadcrumbSeparator {
+    padding: 0 0.5em;
 }
