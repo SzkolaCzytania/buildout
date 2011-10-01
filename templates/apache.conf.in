@@ -1,0 +1,34 @@
+<VirtualHost *:80>
+  ServerName testing.szkolaczytania.org.pl
+  ServerAlias admin.szkolaczytania.org.pl
+
+  DocumentRoot /var/www/
+  CustomLog "|/usr/local/sbin/cronolog --symlink=/var/log/apache2/http-%{SERVER_NAME}-access.log /var/log/apache2/%Y/%m/%d/http-%{SERVER_NAME}-access.log" combined
+  ErrorLog  "|/usr/local/sbin/cronolog --symlink=/var/log/apache2/http-%{SERVER_NAME}-error.log  /var/log/apache2/%Y/%m/%d/http-%{SERVER_NAME}-error.log"
+
+  RewriteEngine On
+  ProxyRequests Off
+
+  <Proxy http://${varnish:bind}/*>
+    Order deny,allow
+    Deny from all
+    Allow from all
+  </Proxy>
+
+  RewriteRule ^/(.*)$  ${varnish:bind}/VirtualHostBase/http/%{SERVER_NAME}:80/szcz/VirtualHostRoot/$1 [L,P]
+  ProxyPassReverse / ${varnish:bind}/
+
+</VirtualHost>
+
+<VirtualHost *:80>
+  ServerName www.szkolaczytania.org.pl
+  DocumentRoot /var/www/szcz/
+
+<Directory /var/www/szcz/>
+  Options -Indexes FollowSymLinks MultiViews
+  AllowOverride All
+  Order allow,deny
+  allow from all
+</Directory>
+
+</VirtualHost>
