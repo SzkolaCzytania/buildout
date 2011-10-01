@@ -34,7 +34,7 @@
             <span class="date" tal:content="python:toLocalizedTime(obj.Date)">May 5</span>
             <tal:if condition="obj/Subject">
               <span class="sep">|</span> 
-              Tags: 
+              Tagi: 
             </tal:if>
             <tal:tags repeat="tag obj/Subject">
             <a href="" class="tagLink" tal:content="tag" 

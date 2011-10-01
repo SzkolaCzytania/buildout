@@ -46,8 +46,6 @@
           <span
             tal:condition="python: not item_sametime and not item_samedate">
             <span tal:replace="string:${item_startdate}" />
-              <br/>-<br/>
-            <span tal:replace="string:${item_enddate}" />
           </span>
         </span>
         </p>
@@ -61,7 +59,7 @@
             </span>
         </a>
       </h6>
-        <p class="itemInfos" tal:condition="obj/location"> &mdash;
+        <p class="itemInfos" tal:condition="obj/location">
           <tal:location content="obj/location">Location</tal:location>
         </p>
       </div>

@@ -141,7 +141,7 @@ li{margin-left:2em}
 .documentContent ul {
     margin: 1em;
 }
-#portal-columns li {
+.portlet li {
     list-style-image: url(../images/dot.png);
     margin-bottom:0.5em;
     line-height: 1.5em;
@@ -1167,3 +1167,219 @@ h4.bookTitle {
 #portal-breadcrumbs .breadcrumbSeparator {
     padding: 0 0.5em;
 }
+
+/** My stuff
+ * from sunburs */
+
+
+
+#content img.tileImage,
+#content div.newsImageContainer {
+    float: right;
+    margin: 0 1em 0.5em 1em;
+}
+#content div.newsImageContainer a {
+    border-bottom: none;
+}
+#content div.newsImageContainer p.discreet {
+    margin: 0;
+    padding: 0.5em;
+    background-color: #666;
+    background-color: rgba(40,40,40,0.7);
+    color: White;
+    font-weight: bold;
+    position: relative;
+    width: 190px;
+    top: -3em;
+}
+
+#content .documentDescription,
+#content #description {
+    color: #666;
+    margin-left: 0;
+    font: bold 1.25em Arial, FreeSans, sans-serif;
+    margin-bottom: 1em;
+    line-height: 1.4em;
+}
+
+p.tweet li {
+  margin: 0em;
+
+}
+
+div.documentByLine {
+    font-size: 90%;
+    margin: 1em 0;
+    display: block;
+    color: #666;
+}
+
+#category {
+    font-size: 75%;
+    margin-bottom: 1em;
+    color: #666;
+    text-align: right;
+}
+
+#category a.link-category, span.selectedTag {
+    color: black;
+    padding: 0.25em 0.5em;
+    background: #ddd;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
+#category a.link-category:hover {
+    background: #205c90;
+    color: White;
+    border-color: #205c90;
+}
+#category .separator {
+    display: none;
+}
+
+.discusion {
+  margin-top: 2em;
+
+}
+
+.discreet {
+    color: #666;
+    font-size: 85%;
+    font-weight: normal;
+}
+.eventDetails {
+    float: right;
+    clear: right;
+    margin: 0 0 0.5em 1em;
+}
+/* @group Data tables */
+
+table.listing,
+table.plain {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.invisible td,
+table.invisible th,
+table.plain td,
+table.plain th,
+table.listing td,
+table.listing th {
+    padding: 0.5em 1em;
+    vertical-align: top;
+}
+table.plain th,
+table.plain td {
+    border: 1px solid #ddd;
+}
+
+table.listing td.listingCheckbox,
+table.listing th.listingCheckbox {
+    text-align: center;
+}
+
+
+table.listing {
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+table.listing .top {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+table.listing th {
+    text-align: left;
+    color: #666;
+    border: 0.1em solid #e7e7e7;
+    border-style: solid solid none;
+    background: #ddd;
+}
+table.listing tr.odd th {
+    border: 0.1em solid #fff;
+    border-style: solid solid none none;
+}
+table.listing tbody th {
+    font-weight: bold;
+}
+table.listing tbody tr {
+    text-align:left;
+}
+table.listing tbody tr.odd {
+    background: #eee;
+}
+table.listing tbody tr td {
+    background: transparent;
+}
+table.listing tbody tr.odd td {
+    background: #eee;
+}
+table.listing td {
+    border-right: 1px solid #ddd;
+}
+table.listing a {
+    border: none;
+    display: inline-block;
+    border-bottom: none !important;
+}
+
+table.listing td.draggable {
+    text-shadow: White 1px 1px 1px;
+    background: #ddd !important;
+    border-bottom: 1px solid white;
+    padding: 0.4em 0.4em 0 0.5em;
+}
+/* Vertical table data listings */
+table.vertical {
+}
+table.vertical th {
+    text-align: right;
+}
+table.vertical td {
+    border-top: 0.1em solid #e7e7e7;
+    padding: 0.5em;
+}
+/* Grid table listings */
+table.grid td,
+table.grid th {
+    border: 1px solid #e7e7e7;
+    padding: 0.5em;
+}
+
+.dragindicator {
+    outline: 2px solid #FFD700;
+}
+
+#foldercontents-order-column {
+    padding: 0;
+}
+
+div.listingBar {
+    font-size: 80%;
+    margin: 1em 0;
+}
+
+div.listingBar .next {
+    display: inline-block;
+    float: right;
+}
+
+div.listingBar .previous {
+    display: inline-block;
+}
+
+div.listingBar a {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    border: 0.1em solid #ccc;
+}
+
+div.listingBar a:hover {
+    color: White;
+    background-color: #329fd7;
+    border-color: #329fd7;
+}
+
+/* @end */

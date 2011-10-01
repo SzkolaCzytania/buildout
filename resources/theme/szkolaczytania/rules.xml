@@ -5,8 +5,8 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     css:if-content="#visual-portal-wrapper">
 
-    <theme href="home.html" css:if-content="body.section-front-page"/>
-    <theme href="index.html"/>
+    <theme href="home.html" css:if-content="body.portaltype-portlet-page"/>
+    <theme href="page_2_columns.html"/>
 
     <notheme if-path="presentation_view"/>
     <notheme if-path="source_editor.htm"/>
@@ -17,12 +17,6 @@
 
     <replace theme="/html/head/title" content="/html/head/title"/>
     <replace theme="/html/head/base" content="/html/head/base" />
-
-    <!-- add only plone javascript -->
-    <!--    <append theme='/html/head' content='/html/head/script'/>-->
-
-    <!-- for cmsui -->
-    <before css:theme-children="body" css:content="#plone-cmsui-trigger" />
 
     <copy attributes="class" css:content="body" css:theme="body"/>
     <copy attributes="id dir" css:content="body" css:theme="body"/>
@@ -41,33 +35,62 @@
         </xsl:for-each>
     </replace>
 
-    <!-- book search form -->
-    <replace content='//*[@name="searchform"]' theme='//*[@id="livesearch0"]' />
-    <copy attributes="href" content='//*[@rel="search"]' css:theme="dl.portletSearch a.moreLink" />
+    <!-- only portlet page stuff /home page/ -->
+    <rules css:if-content="body.portaltype-portlet-page">
+      <copy css:content-children='#portal-column-content div#content' theme='//*[@id="portal-column-content"]'/>
+      <drop css:content="h1.documentFirstHeading" />
+      <replace css:content="#portal-column-content div dl">
+        <xsl:for-each css:select="dl">
+            <xsl:copy-of select="." />
+            <hr class="blocksSep" />
+        </xsl:for-each>
+      </replace>
+      <!-- carousel -->
+      <copy css:content-children='div.carousel div.items div.itemPadding' css:theme='div#carousel div.items' />
+    </rules>
 
-    <!-- calendar portlet -->
-    <copy css:content-children='dl.portletCalendar' css:theme='dl.portletCalendar' />
-
-    <!-- events portlet -->
-    <copy css:content-children='dl.portletEvents' css:theme='dl.portletCollectionEvents' />
+    <!-- if not home page drop above portlets -->
+    <drop css:content="div#portlets-above"/>
 
     <!-- right portlets -->
+    <replace content-children='//*[@id="portal-column-two"]' theme-children='//*[@id="portal-column-two"]' />
     <replace css:content="#portal-column-two div dl">
       <xsl:for-each css:select="dl">
-        <xsl:if test="not(contains(@class,'portletCalendar')) 
-                      and not(contains(@class,'portletEvents'))">
           <xsl:copy-of select="." />
           <hr class="blocksSep" />
-        </xsl:if>
       </xsl:for-each>
     </replace>
-    <replace content-children='//*[@id="portal-column-two"]' theme-children='//*[@id="portal-column-two"]' />
 
     <!-- center column -->
-    <copy content-children='//*[@id="portal-column-content"]' theme='//*[@id="portal-column-content"]' />
+    <copy css:content-children='#portal-column-content' theme='//*[@id="portal-column-content"]'/>
+
+    <!-- footer portlets -->
+    <copy css:content-children='dl.portletCalendar' css:theme='dl.portletCalendar' />
+    <copy css:content-children='dl.portletEvents' css:theme='dl.portletCollectionEvents' />
+    <copy css:content-children='dl.portletSearch' css:theme='dl.portletSearch' />
+
+    <!-- newsletter -->
+    <copy attributes="action method" css:content='dl.portlet-dancing form' css:theme="dl.portletNewsletter form" />
+    <copy attributes="name" 
+          css:content='dl.portlet-dancing form input#default-channel-html-widgets-composer-email' 
+          css:theme="dl.portletNewsletter input.newsletterField" />
+    <copy attributes="name" 
+          css:content='dl.portlet-dancing form input#default-channel-html-buttons-subscribe' 
+          css:theme="dl.portletNewsletter input.newsletterButton" />
+
+    <copy content='//*[@class="portlet portlet-dancing"]/dd[1]/div[1]' theme='//*[@class="portlet portletNewsletter grid_4"]/dd[1]/p' />
+    <copy content='//*[@class="portlet portlet-dancing"]/dd[2]/span' theme='//*[@class="portlet portletNewsletter grid_4"]/dd[2]/p[1]' />
 
     <!-- site actions -->
     <copy content-children='//*[@id="portal-siteactions"]' theme='//*[@id="portal-siteactions"]' />
 
+    <!-- breadcrumbs -->
+    <copy css:content-children='div#portal-breadcrumbs' css:theme='div#portal-breadcrumbs' />
+    <drop css:content='div#portal-breadcrumbs' />
+
+    <!--
+    <replace content='//*[@name="searchform"]' theme='//*[@id="livesearch0"]' />
+    <copy attributes="href" content='//*[@rel="search"]' css:theme="dl.portletSearch a.moreLink" />
+    -->
 
 </rules>
