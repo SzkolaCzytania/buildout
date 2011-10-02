@@ -1171,17 +1171,24 @@ h4.bookTitle {
 /** My stuff
  * from sunburs */
 p.tweet li {
-  margin: 0em;
-
+    margin: 0em;
 }
 
-dl#relatedItemBox img,
-div#content-core dl dt img,
-dl.searchResults img,
-ul#portal-sitemap img{
- display: none;
+dl#relatedItemBox img, div#content-core dl dt img,
+dl.searchResults img, ul#portal-sitemap img{
+    display: none;
 }
 
 div#content-core {
- margin-top: 1em;
+    margin-top: 1em;
 }
+
+div.portalMessage{
+    margin: 0 0 2em 0;
+    font-size: 80%;
+    border: 1px solid #996;
+    background-color: #ffffe3;
+    clear:both;
+    padding: 0.5em 0.75em;
+}
+

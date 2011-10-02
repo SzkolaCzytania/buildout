@@ -43,7 +43,7 @@
     <rules css:if-content="body.portaltype-portlet-page">
       <copy css:content-children='#portal-column-content div#content' theme='//*[@id="portal-column-content"]'/>
       <drop css:content="h1.documentFirstHeading" />
-      <replace css:content="#portal-column-content div dl">
+      <replace css:content="#portal-column-content div div dl">
         <xsl:for-each css:select="dl">
             <xsl:copy-of select="." />
             <hr class="blocksSep" />
@@ -75,15 +75,18 @@
 
     <!-- newsletter -->
     <copy attributes="action method" css:content='dl.portlet-dancing form' css:theme="dl.portletNewsletter form" />
-    <copy attributes="name" 
-          css:content='dl.portlet-dancing form input#default-channel-html-widgets-composer-email' 
+
+    <copy attributes="name value"
+          content='//*/dl[@class="portlet portlet-dancing"]//*/input[@type="text"]'
           css:theme="dl.portletNewsletter input.newsletterField" />
-    <copy attributes="name" 
-          css:content='dl.portlet-dancing form input#default-channel-html-buttons-subscribe' 
+    <copy attributes="name value"
+          content='//*/dl[@class="portlet portlet-dancing"]//*/input[@type="submit"]'
           css:theme="dl.portletNewsletter input.newsletterButton" />
 
     <copy content='//*[@class="portlet portlet-dancing"]/dd[1]/div[1]' theme='//*[@class="portlet portletNewsletter grid_4"]/dd[1]/p' />
     <copy content='//*[@class="portlet portlet-dancing"]/dd[2]/span' theme='//*[@class="portlet portletNewsletter grid_4"]/dd[2]/p[1]' />
+    <!-- portal status message -->
+    <before content='//*/dl[@class="portlet portlet-dancing"]//*/div[@class="portalMessage"]' theme-children='//*[@id="portal-column-content"]' />
 
     <!-- site actions -->
     <copy content-children='//*[@id="portal-siteactions"]' theme='//*[@id="portal-siteactions"]' />
@@ -91,6 +94,7 @@
     <!-- breadcrumbs -->
     <copy css:content-children='div#portal-breadcrumbs' css:theme='div#portal-breadcrumbs' />
     <drop css:content='div#portal-breadcrumbs' />
+
 
     <!-- copy google analytics -->
     <after theme="//*[@id='portal-below-content']" content="/html/body/div/div[3]/script" />
