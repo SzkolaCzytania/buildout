@@ -21,6 +21,10 @@
     <copy attributes="class" css:content="body" css:theme="body"/>
     <copy attributes="id dir" css:content="body" css:theme="body"/>
 
+    <!-- copy only flowplayer css/js -->
+    <after theme="/html/head/script[last()]" content="/html/head/script[contains(@src, 'player')]"/>
+    <after theme="/html/head/link[last()]" content="/html/head/style[contains(., 'play')]"/>
+
     <!-- Logo (link target) -->
     <copy attributes="href title" css:content='#portal-logo' css:theme="#portal-logo a" />
 
@@ -88,9 +92,7 @@
     <copy css:content-children='div#portal-breadcrumbs' css:theme='div#portal-breadcrumbs' />
     <drop css:content='div#portal-breadcrumbs' />
 
-    <!--
-    <replace content='//*[@name="searchform"]' theme='//*[@id="livesearch0"]' />
-    <copy attributes="href" content='//*[@rel="search"]' css:theme="dl.portletSearch a.moreLink" />
-    -->
+    <!-- copy google analytics -->
+    <after theme="//*[@id='portal-below-content']" content="/html/body/div/div[3]/script" />
 
 </rules>

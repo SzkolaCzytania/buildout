@@ -1,0 +1,1162 @@
+
+/* - public.css - */
+@media screen {
+
+q {
+    quotes: "“" "”" "‘" "’";
+}
+
+#portal-searchbox {
+    float: right;
+    text-align: left;
+    clear: right;
+    margin: 1.2em 0;
+    font-size: 80%;
+}
+
+#portal-searchbox form {
+    white-space: nowrap;
+}
+
+#portal-searchbox label {
+    font-weight: normal;
+}
+
+#searchGadget {
+    width: 13em;
+}
+#searchGadget,
+.LSBox input.searchButton {
+}
+
+.LSBox .searchSection {
+}
+
+#content input.searchField {
+    margin-bottom: 1em;
+}
+
+input.searchField {
+/*  -webkit-appearance: searchfield;*/
+    -moz-appearance: searchfield;
+}
+
+/* Collapsible elements in search_form */
+
+.collapsible .collapser.collapsed {
+    padding-right: 14px;
+    background: url('arrowRight.png') center right no-repeat;
+}
+
+.collapsible .collapser.expanded {
+    padding-right: 14px;
+    background: url('arrowDown.png') center right no-repeat;
+}
+/* @end */
+
+/* @group LiveSearch */
+
+#LSResult {
+    position: absolute;
+    right: 0;
+    background: White;
+    margin: -1.5em 0 0 -7em;
+}
+
+#LSResult fieldset {
+    padding: 1em 0 0;
+    border: 0.1em solid #ccc;
+}
+
+#livesearchLegend {
+    background-color:#ccc;
+    padding:0.3em;
+}
+
+#LSResult .LSDescr {
+    font-size: 85%;
+    color: #666;
+}
+
+.LSRow,
+#LSNothingFound {
+    display: block;
+    padding: 0.5em 1em;
+    white-space: normal;
+    width:28em;
+}
+
+.LSHighlight {
+    background: #ddd;
+}
+
+/* @end */
+
+
+/* @group Listings */
+
+a.link-parent {
+}
+
+a.link-anchor {
+    border: none !important;
+    color: Black !important;
+    cursor: default !important;
+}
+#content a.link-overlay {
+    border-bottom: 1px dotted #205c90 !important;
+}
+
+dl dt .documentByLine {
+    font-weight: normal;
+}
+
+dl dt span.summary a {
+    border: none !important;
+}
+
+/* @end */
+
+/* @group Content Area */
+
+/* Special case of #content - TinyMCE */
+body#content {
+    margin: 1em;
+}
+
+#content h1 {
+    margin-top: 0.5em;
+}
+
+#content h1.documentFirstHeading {
+    margin-top: 0;
+}
+
+#content p,
+#content table,
+#content dl,
+dl.portlet p,
+dl.portlet {
+    margin-bottom: 1em;
+}
+
+#content ul,
+#content ol {
+
+}
+
+#category {
+    font-size: 75%;
+    margin-bottom: 1em;
+    color: #666;
+    text-align: right;
+}
+
+#category a.link-category, span.selectedTag {
+    color: black;
+    padding: 0.25em 0.5em;
+    background: #ddd;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
+#category a.link-category:hover {
+    background: #205c90;
+    color: White;
+    border-color: #205c90;
+}
+#category .separator {
+    display: none;
+}
+
+#content ul {
+    list-style-type: disc;
+    margin-left: 2em;
+}
+
+#content ol,
+dl.portlet ol {
+    list-style-type: decimal;
+    margin-left: 2em;
+}
+
+#content li,
+dl.portlet li {
+    margin-bottom: 0.25em;
+    line-height: 1.5em;
+    display: list-item;
+}
+
+#content dt {
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+#content dd {
+    margin: 0.5em;
+}
+
+#content pre {
+    background-color: #222;
+    color: White;
+    font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    padding: 1em;
+    overflow-x: auto;
+    font-size: 90%;
+    margin-bottom: 1em;
+    line-height: 1.25em;
+}
+#content pre.python {
+    background-color: White;
+}
+
+#content code {
+    font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+
+#content div.documentByLine {
+    font-size: 85%;
+    display: block;
+    color: #666;
+}
+
+#content .discreet,
+#sidebar .discreet {
+    color: #666;
+    font-size: 90%;
+    font-weight: normal;
+}
+
+#content .visualHighlight {
+    background-color: #ffb;
+}
+
+#content .pullquote {
+    margin: 0 1em 0.5em 0.5em;
+    font-weight: bold;
+    line-height: 1.25em;
+    float: right;
+    width: 35%;
+    clear: right;
+    color: #444;
+    font-size: 1.6em;
+    letter-spacing: -0.08em !important;
+}
+#content .callout {
+    background: #eee;
+    padding: 1em;
+    border-left: 1em solid #ccc;
+    clear: both;
+}
+
+
+#content table {
+    text-align: left;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+#content .documentDescription,
+#content #description {
+    color: #666;
+    margin-left: 0;
+    margin-bottom: 1em;
+    font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
+}
+
+#content img.tileImage,
+#content div.newsImageContainer {
+    float: right;
+    margin: 0 1em 0.5em 1em;
+}
+#content div.newsImageContainer a {
+    border-bottom: none;
+}
+#content div.newsImageContainer p.discreet {
+    margin: 0;
+    padding: 0.5em;
+    background-color: #666;
+    background-color: rgba(40,40,40,0.7);
+    color: White;
+    font-weight: bold;
+    position: relative;
+    width: 190px;
+    top: -3em;
+}
+.eventDetails {
+    float: right;
+    clear: right;
+    margin: 0 0 0.5em 1em;
+}
+
+/* @end */
+
+
+
+/* @group Data tables */
+
+table.listing,
+table.plain {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.invisible td,
+table.invisible th,
+table.plain td,
+table.plain th,
+table.listing td,
+table.listing th {
+    padding: 0.5em 1em;
+    vertical-align: top;
+}
+table.plain th,
+table.plain td {
+    border: 1px solid #ddd;
+}
+
+table.listing td.listingCheckbox,
+table.listing th.listingCheckbox {
+    text-align: center;
+}
+
+
+table.listing {
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+table.listing .top {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+table.listing th {
+    text-align: left;
+    color: #666;
+    border: 0.1em solid #e7e7e7;
+    border-style: solid solid none;
+    background: #ddd;
+}
+table.listing tr.odd th {
+    border: 0.1em solid #fff;
+    border-style: solid solid none none;
+}
+table.listing tbody th {
+    font-weight: bold;
+}
+table.listing tbody tr {
+    text-align:left;
+}
+table.listing tbody tr.odd {
+    background: #eee;
+}
+table.listing tbody tr td {
+    background: transparent;
+}
+table.listing tbody tr.odd td {
+    background: #eee;
+}
+table.listing td {
+    border-right: 1px solid #ddd;
+}
+table.listing a {
+    border: none;
+    display: inline-block;
+    border-bottom: none !important;
+}
+
+table.listing td.draggable {
+    text-shadow: White 1px 1px 1px;
+    background: #ddd !important;
+    border-bottom: 1px solid white;
+    padding: 0.4em 0.4em 0 0.5em;
+}
+/* Vertical table data listings */
+table.vertical {
+}
+table.vertical th {
+    text-align: right;
+}
+table.vertical td {
+    border-top: 0.1em solid #e7e7e7;
+    padding: 0.5em;
+}
+/* Grid table listings */
+table.grid td,
+table.grid th {
+    border: 1px solid #e7e7e7;
+    padding: 0.5em;
+}
+
+.dragindicator {
+    outline: 2px solid #FFD700;
+}
+
+#foldercontents-order-column {
+    padding: 0;
+}
+
+div.listingBar {
+    font-size: 80%;
+    margin: 1em 0;
+}
+
+div.listingBar .next {
+    display: inline-block;
+    float: right;
+}
+
+div.listingBar .previous {
+    display: inline-block;
+}
+
+div.listingBar a {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    border: 0.1em solid #ccc;
+}
+
+div.listingBar a:hover {
+    color: White;
+    background-color: #329fd7;
+    border-color: #329fd7;
+}
+
+/* @end */
+
+/* @group Status messages */
+
+dl.portalMessage {
+    margin: 1em 0;
+    font-size: 80%;
+    border: 1px solid #996;
+    background-color: #ffffe3;
+    clear:both;
+}
+dl.portalMessage a,
+#content dl.portalMessage a {
+    color: black;
+    border-bottom: 1px solid #888;
+}
+dl.portalMessage dt {
+    background-color: #996;
+    font-weight: bold;
+    float: left;
+    margin: 0 0.5em 0 0;
+    padding: 0.5em 0.75em;
+    color: White;
+    line-height: 1.25em;
+}
+dl.portalMessage dd {
+    padding: 0.5em 0.5em;
+    margin: 0;
+    line-height: 1.25em;
+}
+dl.warning {
+    border-color: #d80;
+}
+dl.warning dt {
+    background-color: #d80;
+}
+dl.error {
+    border-color: #d00;
+}
+dl.error dt {
+    background-color: #d00;
+}
+dl.warning {
+    border-color: #d80;
+}
+dl.warning dd {
+    background-color: #fd7;
+}
+dl.error {
+    border-color: red;
+}
+dl.error dd {
+    background-color: #fdc;
+}
+
+/* Additional specificity for when status is shown inside #content */
+#content dl.portalMessage {
+    font-size: 100%;
+}
+#content dl.portalMessage dt {
+    margin: 0 0.5em 0 0;
+    padding: 0.5em 0.75em;
+}
+#content dl.portalMessage dd {
+    margin: 0;
+}
+
+/* @end */
+
+/* @group Comments */
+
+.comment {
+    margin-top: 1.5em;
+    font-size: 80%;
+}
+
+.comment .documentByLine {
+    margin-left: 1em;
+}
+
+.comment .formControls {
+    margin-left: 0;
+}
+
+.commentTime {
+    color: #666;
+}
+
+.commentBody {
+    padding: 1em;
+    margin: 0.5em 0;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    box-shadow: 0 0 1em 0 #888;
+    -moz-box-shadow: 0 0 0.5em 0 #888;
+    -webkit-box-shadow: 0 0 0.5em #888;
+}
+
+.comment h1,
+.comment h2,
+.comment h3,
+.comment h4,
+.comment h5,
+.comment h6 {
+    font-weight: normal;
+}
+
+/* @end */
+
+.reviewHistory,
+.contentHistory {
+    display: inline;
+    color: Black;
+}
+.spacer {
+    margin: 1em;
+}
+
+.label {
+    font-weight: bold;
+    display: inline;
+    padding-right: 0.5em;
+}
+.optionsToggle {
+    border: 0.1em solid #8cacbb;
+    color: Black;
+    background-color: #dee7ec;
+    font-weight: normal;
+    font-size: 90%;
+}
+
+/* for highlighting of search terms */
+.highlightedSearchTerm {
+   background-color: #ffa;
+}
+
+dl.searchResults .highlightedSearchTerm {
+    background-color: transparent;
+    font-weight: bold;
+}
+/* for greying out inherited roles */
+.noInheritedRoles {
+    color: #a0a0a0;
+}
+/* for highlighting current items, like the language or today in the calendar */
+.currentItem {
+    border-collapse: collapse;
+    border: 0.2em solid #ffa500;
+    padding: 0.1em;
+}
+
+
+/* @end */
+
+/* @group Search results page */
+
+form.searchPage {
+    text-align:center;
+}
+
+input.searchPage {
+    font-size:200% !important;
+}
+
+/* @end */
+
+
+/* @group Image alignment classes */
+
+.image-left {
+   float: left;
+   margin: 0.5em 1em 0.5em 0;
+}
+.image-right {
+   float: right;
+   margin: 0.5em;
+}
+.image-inline {
+   float: none;
+}
+/*note: the tricky thing here is that image-inline|image-left|image-right
+can both be on an image and a wrapper element e.g. a dl tag*/
+img.image-left,
+img.image-right,
+.captioned img {
+    border: 1px solid #ddd;
+}
+dd.image-caption {
+    text-align: left;
+    padding: 0 0 0 3px; /*image padding+border with*/
+    margin: 0;
+    color: #666;
+    font-size: 85%;
+}
+
+/* @end */
+
+
+
+/* @group Forms */
+
+fieldset,
+.editionComment {
+    line-height:1.5em;
+    margin:1em 0;
+    padding:0 1em 1em;
+    width:auto;
+}
+
+/* Emulates the styling from the h1 tag */
+#content .field input[type="text"][name$=".title"],
+#archetypes-fieldname-title input {
+    font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
+    line-height: 125%;
+    color: Black;
+    letter-spacing: -0.05em;
+    margin: inherit -0.05em;
+    font-size: 2em; /* 26px equiv */
+    font-weight: bold;
+}
+
+/* Emulates styling from the description's view */
+#content .field textarea[name$=".description"],
+#archetypes-fieldname-description textarea#description {
+    font-family: Arial,FreeSans,sans-serif;
+    color:#666666;
+    font-size:1.25em;
+    font-weight: bold;
+}
+
+
+div.formControls {
+    margin: 1em 0em;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    background-color: #ffffe0;
+}
+
+#content textarea {
+    font: 100% Monaco, "Courier New", Courier, monospace;
+    width: 95%;
+}
+#content select {
+    vertical-align: top;
+}
+#content fieldset {
+    border: 0.1em solid #329fd7;
+    border-style: solid none none none;
+}
+#content legend {
+    padding: 0.5em;
+    font-size: 85%;
+}
+label {
+    font-weight:bold;
+}
+
+#content label {
+}
+
+#content optgroup {
+    font-style: normal;
+    font-weight: bold;
+    color: #999;
+    padding-left: 0.25em;
+}
+#content option {
+    color: black;
+}
+#content optgroup > option {
+    padding: 0 0.25em 0 1em;
+}
+dl.enableFormTabbing dd {
+    margin-left: 0;
+    padding-top: 2em;
+}
+.searchSection {
+    color: #76797c;
+    margin-top: 0.25em;
+}
+.searchSection label:hover {
+    color: Black;
+}
+.field {
+    clear: both;
+    margin-bottom: 1em;
+}
+.field input[type="text"] {
+   width: 20em;
+}
+.field input[type="text"][size] {
+   width: auto;
+}
+.field input[type="text"][name$=".title"],
+input#title {
+    width: 100%;
+}
+.field.error input[type="text"][name$=".title"],
+.error input#title {
+    width: 99%;
+}
+
+.fieldRequired {
+    background: url(required.png) center left no-repeat;
+    padding: 0 0 0 1em;
+    color: White;
+}
+.fieldUploadFile {
+    text-align: right;
+    margin-right: 0.75em;
+    display: none;
+}
+.fieldTextFormat {
+    text-align: right;
+    margin-right: 0.75em
+}
+.formHelp {
+    color: #555;
+    margin: 0 0 0.2em 0;
+}
+div.field.error {
+    background-color: #fdc;
+    border:  1px solid red;
+    padding: 0.5em;
+    margin:  1em 0;
+}
+.error .fieldRequired {
+    color: #d00;
+}
+div.error.warning {
+    background-color: transparent;
+    border: none;
+    margin-top: 0;
+    padding: 0;
+}
+
+div.error.warning input {
+    border: 2px solid red;
+}
+
+input.inputLabelActive {
+    color: #76797c;
+}
+textarea#form\.description {
+    height: 6em;
+    width: 99%;
+}
+table.listing tbody tr.odd.selected td,
+table.listing tbody tr.odd.dragging td,
+tr.dragging,
+tr.selected {
+    background-color: #ffa;
+}
+table.listing tbody tr.odd.error td,
+tr.error {
+    background-color: #fdc;
+}
+.multi-widget-field {
+    padding-left: 0.5em;
+    border-left: 1.5em solid #DDD;
+}
+
+.multi-widget-checkbox {
+    margin-left: -2em;
+    margin-right: 0.5em;
+    width: 1.5em;
+    display: inline-block;
+}
+
+/* @group Login form */
+
+body.template-logged_out #content,
+body.template-login_form #content,
+.pb-ajax #login-form {
+    text-align: center;
+}
+
+#fieldset-openid-login input, #login-form input {
+    font-size: 150%;
+}
+
+
+body.template-register #content input,
+body.template-new-user #content input {
+    font-size: 150%;
+    width: inherit;
+
+}
+
+#fieldset-openid-login label, #login-form label {
+    margin-right:0.5em;
+    padding-top:0.2em;
+    text-align:right;
+    width: 10em;
+    display: inline-block;
+}
+
+#fieldset-openid-login .formControls input, #login-form .formControls input {
+margin-left: 0.25em;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Table of Contents */
+
+ /*Table of Contents styling - essentially a portlet with smaller fonts and aligned right + limited in width*/
+
+dl.toc {
+    float: right;
+    width: 35%;
+    font-size: 100%;
+    margin: 1em 0 0.5em 1.5em;
+}
+dl.toc dt {
+    margin-left: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+dl.toc dd {
+    margin-bottom: 0;
+    padding-left: 2em;
+}
+dl.toc dd ol {
+    margin-left: 1.5em;
+}
+
+/* @end */
+
+/* @group Sitemap */
+
+#portal-sitemap {
+    list-style: none;
+    margin-left: 0;
+    font-size: 130%;
+    font-weight: bold;
+}
+
+#portal-sitemap li {
+    list-style: none;
+    margin-left: 0;
+}
+
+#portal-sitemap a {
+    border-bottom: none;
+    display: block;
+}
+
+#portal-sitemap > li {
+    border-bottom:0.1em dotted #ddd;
+    line-height:1.8em;
+    padding:0.25em 1em;
+    margin-bottom: 0;
+}
+
+#portal-sitemap .navTreeLevel2,
+#portal-sitemap .navTreeLevel2 ul {
+    font-size: 85%;
+    font-weight: normal;
+    margin-bottom: 0;
+    padding: 0.25em 0;
+}
+
+/* @end */
+
+/* @group Album view classes */
+.photoAlbumEntry {
+    float: left;
+    position:relative;
+    overflow: hidden;
+    height: 185px;
+    width: 143px;
+    margin: 0em;
+    padding: 0px 6px 0px 9px;
+    text-align: center;
+    background-image: url('polaroid-single.png');
+    background-repeat: no-repeat;
+}
+.photoAlbumEntry img {
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 auto;
+}
+.photoAlbumEntryWrapper {
+    /*display: block;*/
+    height: 130px;
+    width: 128px;
+    margin-bottom: 7px;
+}
+.photoAlbumEntry a {
+    display: block;
+    text-decoration: none;
+    font-size: 90%;
+    height: 169px;
+    width: 130px;
+    margin: 16px auto 0px;
+}
+.photoAlbumFolder {
+    background-image: url('polaroid-multi.png');
+    background-repeat: no-repeat;
+}
+.photoAlbumEntryTitle {
+    color: #76797c;
+    display: block;
+    width: 128px;
+    height: 3.6em;
+}
+
+/* @end */
+
+/* @group Invisibles */
+
+.hiddenStructure {
+    display: block;
+    background: transparent;
+    background-image: none; /* safari bug */
+    border: none;
+    height: 0.1em;
+    overflow: hidden;
+    padding: 0;
+    margin: -0.1em 0 0 -0.1em;
+    width: 1px;
+}
+
+#content .visualNoMarker {
+    list-style:none;
+    margin-left: 0;
+}
+
+.visualClear {
+    clear: both;
+}
+
+/* @end */
+
+/* @group Accessibility elements, applied by JS */
+
+body.largeText { font-size: 125%; }
+body.smallText { font-size: 85%; }
+
+/* @end */
+
+/* @group Content History */
+
+#content-history #history dd {
+}
+
+#content-history div.historyRecord {
+    margin-bottom: 1em;
+}
+
+
+#content-history div.historyTools ul {
+    float: right;
+    margin: 0.5em 1em;
+}
+
+#content-history div.historyTools ul li {
+    display: inline;
+    padding: 0 0.015em;
+}
+
+#content-history div.historyTools ul li a{
+    border-bottom: none;
+}
+
+#content-history div.historyTools form {
+    display: inline;
+}
+
+#content-history .historyAction {
+
+}
+
+#content-history .historyByLine {
+    background: #ddd;
+    padding: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+    -moz-border-radius-topleft: 0.5em;
+    -moz-border-radius-topright: 0.5em;
+}
+
+#content-history div.historyLinks {
+    float: right;
+    clear: right;
+    margin: 0.5em 1em 0 0;
+}
+
+
+#content-history div.historyComment {
+    padding: 0.5em 1em;
+    border: 1px solid #ddd;
+}
+
+#content-history div.historyComment p {
+    margin: 0;
+    padding-top: 1px;
+}
+
+#content-history a.historyComparePrevious {
+    border-top: 1px dotted #ccc;
+    display: block;
+    margin-top: 3em;
+    text-align: center;
+}
+
+#content-history a.historyComparePrevious span {
+    background-color: white;
+    position: relative;
+    top: -0.75em;
+    padding: 0 0.5em;
+}
+
+/* @end */
+
+.icons-on .contenttype-document {
+    background: no-repeat transparent 0px 4px url(contenttypes-sprite.png);
+}
+.icons-on .contenttype-event {
+    background: no-repeat transparent 0px -212px url(contenttypes-sprite.png);
+}
+.icons-on .contenttype-folder {
+    background: no-repeat transparent 0px -644px url(contenttypes-sprite.png);
+}
+.icons-on .contenttype-link {
+    background: no-repeat transparent 0px -1076px url(contenttypes-sprite.png);
+}
+.icons-on .contenttype-news-item {
+    background: no-repeat transparent 0px -1292px url(contenttypes-sprite.png);
+}
+.icons-on .contenttype-plone-site {
+    background: no-repeat transparent 0px -1508px url(contenttypes-sprite.png);
+}
+.icons-on .contenttype-topic {
+    background: no-repeat transparent 0px -1724px url(contenttypes-sprite.png);
+}
+
+/* These should only appear in the add menu */
+.icons-on #plone-contentmenu-factories .contenttype-file {
+    background: no-repeat transparent 0px -428px url(contenttypes-sprite.png);
+}
+.icons-on #plone-contentmenu-factories .contenttype-image {
+    background: no-repeat transparent 0px -860px url(contenttypes-sprite.png);
+}
+
+.icons-on .contenttype-document,
+.icons-on .contenttype-event,
+.icons-on .contenttype-folder,
+.icons-on .contenttype-link,
+.icons-on .contenttype-news-item,
+.icons-on .contenttype-plone-site,
+.icons-on .contenttype-topic,
+.icons-on #plone-contentmenu-factories .contenttype-file,
+.icons-on #plone-contentmenu-factories .contenttype-image {
+    line-height: 2em;
+    display: inline-block;
+    *display: block;
+}
+
+/* @end */
+
+/* @group jQuery Tag multiple selector */
+.optionsBox {
+    overflow-y: auto;
+    border: solid 1px #999999;
+    background: #FFFFFF;
+    height: 14em;
+    width: 100%;
+}
+.optionsBox LABEL {
+    padding: 2px 0 0 0;
+    display: block;
+    line-height: 1em;
+    font-weight: normal;
+}
+.optionsBox input{
+    vertical-align: middle;
+    margin: 1px 4px 4px 6px;
+}
+.optionsBox LABEL.checked {
+    background-color: #EEEEEE;
+}
+.optionsBox LABEL.hover {
+    background-color: #777777;
+    color: #FFFFFF;
+}
+#archetypes-fieldname-subject .formHelp {
+    font-weight: normal;
+}
+#existingTagsSection {
+    position: relative;
+    margin-left: 3em;
+}
+#existingTags {
+    float: left;
+    width: 50%;
+}
+#content #existingTags dd {
+    margin-bottom: 1px;
+    margin-left: 0;
+}
+#content #selectedTags, #content #newTags {
+    margin-bottom: 0;
+    margin-left: 0;
+}
+#content #selectedTagsSection {
+    margin-left: 3em;
+    float: left;
+    width: 43%;
+    margin-bottom: 0;
+}
+#newTagsSection {
+    width: 48%;
+    margin-left: 3em;
+}
+#content p.selectedTag {
+    margin-bottom: .4em;
+}
+#existingTagsTitle, #newTagsTitle {
+    float: left;
+}
+#existingTagsHelp, #newTagsHelp {
+    float: right;
+}
+#noTagsSelected, #oneOrMoreTagsSelected {
+    display: none;
+}
+/* @end */
+
+}
+
