@@ -53,6 +53,9 @@
       <copy css:content-children='div.carousel div.items div.itemPadding' css:theme='div#carousel div.items' />
     </rules>
 
+    <!-- carousel -->
+    <copy css:content-children='div.carousel div.items div.itemPadding' css:theme='div#carousel-mini div.items' />
+
     <!-- if not home page drop above portlets -->
     <drop css:content="div#portlets-above"/>
 
