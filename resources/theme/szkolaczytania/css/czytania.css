@@ -84,6 +84,9 @@ hr.blocksSep {
     border:0;
     margin: -1em 0 0.5em;
 }
+.verSep {
+    height: 10px;
+}
 p {
     line-height: 1.5em;
 }
@@ -840,7 +843,7 @@ h4.calendarMonth #calendar-next {
 
 /** COLOPHON **/
 #portal-colophon,
-#logo-partners {
+.logo-patrons {
     border-top: 1px solid #3c3733;
     padding: 1.4em 0;
     font-size: 0.85em;
@@ -905,7 +908,7 @@ a.followTW {
 }
 
 /** Logos **/
-#logo-partners {
+.logo-patrons {
     text-align: center;
 }
 a.logos {
