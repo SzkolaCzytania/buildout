@@ -851,7 +851,6 @@ h4.calendarMonth #calendar-next {
 #portal-colophon .copyright {
     background: transparent url(../images/logo_mini.png) no-repeat left center;
     padding-left: 110px;
-    width: 350px;
     margin-left:0;
     margin-right: 20px;
     font-size: 1.1em;
@@ -908,10 +907,12 @@ a.followTW {
 }
 
 /** Logos **/
-.logo-patrons {
+.logo-patrons
+{
     text-align: center;
 }
-a.logos {
+a.logos,
+.technology a{
     display: inline-block;
     margin: 0 3px;
     vertical-align: middle;
