@@ -14,7 +14,6 @@
   </dt>
 
   <dd class="portletItem">
-      <p>Integer odio tortor, viverra at posuere pellentesque, porta nec dui.</p>
       <form id="searchform" action="search"
             tal:define="livesearch view/enable_livesearch;"
             tal:attributes="action view/search_action">
@@ -38,7 +37,7 @@
           </div>
         </div>
       </form>
-      <p>Integer odio tortor, viverra at posuere pellentesque, porta nec dui.</p>
+      <p>Szukaj książek, autorów, recenzji, etc.</p>
       <div class="visualClear"><!-- --></div>
     </dd>
 
