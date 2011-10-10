@@ -149,6 +149,10 @@ li{margin-left:2em}
     margin-bottom:0.5em;
     line-height: 1.5em;
 }
+#content-core li {
+  margin-left: 0;
+}
+
 
 /*** PLONE invisibles styles ***/
 /* List classes without markers */
