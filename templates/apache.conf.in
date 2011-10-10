@@ -1,6 +1,5 @@
 <VirtualHost *:80>
   ServerName testing.szkolaczytania.org.pl
-  ServerAlias admin.szkolaczytania.org.pl
 
   DocumentRoot /var/www/
   CustomLog "|/usr/local/sbin/cronolog --symlink=/var/log/apache2/http-szcz-access.log /var/log/apache2/%Y/%m/%d/http-szcz-access.log" combined
@@ -23,6 +22,42 @@
 </VirtualHost>
 
 <VirtualHost *:80>
+  ServerName admin.szkolaczytania.org.pl
+
+  DocumentRoot /var/www/
+  CustomLog "|/usr/local/sbin/cronolog --symlink=/var/log/apache2/http-admin-szcz-access.log /var/log/apache2/%Y/%m/%d/http-szcz-access.log" combined
+  ErrorLog  "|/usr/local/sbin/cronolog --symlink=/var/log/apache2/http-admin-szcz-error.log  /var/log/apache2/%Y/%m/%d/http-szcz-error.log"
+
+  RewriteEngine On
+  ProxyRequests Off
+
+  <Proxy http://${varnish:bind}/*>
+    Order deny,allow
+    Deny from all
+    Allow from all
+  </Proxy>
+
+  RewriteCond %{HTTP_COOKIE} !__ac=.*
+  RewriteCond %{REQUEST_URI} !^/acl_users/credentials_cookie_auth/require_login$
+  RewriteCond %{REQUEST_URI} !/login_form$
+  RewriteCond %{REQUEST_URI} !/login$
+  RewriteCond %{REQUEST_URI} !/logged_out$
+  RewriteCond %{REQUEST_URI} !^/portal_css/
+  RewriteCond %{REQUEST_URI} !^/portal_javascripts/
+  RewriteCond %{REQUEST_URI} !^/login.js$
+  RewriteCond %{REQUEST_URI} !^/logo.png$
+  RewriteCond %{REQUEST_URI} !^/mail_password_form$
+  RewriteCond %{REQUEST_URI} !^/mail_password$
+  RewriteCond %{REQUEST_URI} !^/portal_registration/passwordreset/
+  RewriteCond %{REQUEST_URI} !^/pwreset_form$
+  RewriteCond %{REQUEST_URI} !^/pwreset_finish$
+  RewriteRule ^(.*) /acl_users/credentials_cookie_auth/require_login?came_from=%{REQUEST_URI} [last,redirect=temp]
+  RewriteRule ^/(.*)$  http://${varnish:bind}/VirtualHostBase/http/%{SERVER_NAME}:80/szcz/VirtualHostRoot/$1 [L,P]
+  ProxyPassReverse / http://${varnish:bind}/
+
+</VirtualHost>
+
+<VirtualHost *:80>
   ServerName www.szkolaczytania.org.pl
   DocumentRoot /var/www/szcz/
 
@@ -34,3 +69,4 @@
 </Directory>
 
 </VirtualHost>
+
