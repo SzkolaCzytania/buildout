@@ -102,4 +102,8 @@ sub vcl_fetch {
 sub vcl_deliver {
 
 }
-
+sub vcl_error {
+    set obj.http.Location = "http://static.szkolaczytania.org.pl/proxy_error.html";
+    set obj.status = 302;
+    return(deliver);
+}
