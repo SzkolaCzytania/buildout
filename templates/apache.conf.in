@@ -60,6 +60,7 @@
 <VirtualHost *:80>
   ServerName static.szkolaczytania.org.pl
   ServerAlias www.szkolaczytania.org.pl
+  ServerAlias szkolaczytania.org.pl
   DocumentRoot /var/www/szcz/
 
 <Directory /var/www/szcz/>
