@@ -14,6 +14,7 @@
   </dt>
 
   <dd class="portletItem">
+      <p>Szukaj książek, autorów, recenzji...</p>
       <form id="searchform" action="search"
             tal:define="livesearch view/enable_livesearch;"
             tal:attributes="action view/search_action">
@@ -37,7 +38,8 @@
           </div>
         </div>
       </form>
-      <p>Szukaj książek, autorów, recenzji, etc.</p>
+      <p>"I zaczynam pytać się na nowo, co to może być ów nieznany stan, nie przynoszący żadnego logicznego wytłumaczenia, ale przynoszący oczywistość szczęścia, realności, wobec której inne nikną" 
+      <br/><em><a href="/szcz/books/w-poszukiwaniu-straconego-czasu">W poszukiwaniu straconego czasu</a></em></p>
       <div class="visualClear"><!-- --></div>
     </dd>
 

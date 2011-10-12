@@ -436,6 +436,9 @@ ol.visualNoMarker {
 .portletFooter {
     padding-top: 0.5em;
 }
+.newsDate {
+  float: right;
+}
     
 /** homepage **/
 .portletIntroSC p {
@@ -770,9 +773,9 @@ h4.calendarMonth #calendar-next {
     font-weight: bold;
     display: inline;
 }
-#footer-portlets .portletCollectionEvents .itemInfos {
+/*#footer-portlets .portletCollectionEvents .itemInfos {
     display: inline;
-}
+}*/
 #footer-portlets .portletCollectionEvents .itemContent {
     margin-left: 7em;
     padding:0;
@@ -1200,3 +1203,12 @@ div.portalMessage{
     padding: 0.5em 0.75em;
 }
 
+div.book-authors {
+  margin-bottom: 2em;
+}
+
+div.canonItemListing {
+  clear: both;
+  margin: 2em 0;
+
+}
