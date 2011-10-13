@@ -1,5 +1,7 @@
 <VirtualHost *:80>
-  ServerName testing.szkolaczytania.org.pl
+  ServerName  www.szkolaczytania.org.pl
+  ServerAlias szkolaczytania.org.pl
+  ServerAlias testing.szkolaczytania.org.pl
 
   DocumentRoot /var/www/
   CustomLog "|/usr/local/sbin/cronolog --symlink=/var/log/apache2/http-szcz-access.log /var/log/apache2/%Y/%m/%d/http-szcz-access.log" combined
@@ -59,8 +61,6 @@
 
 <VirtualHost *:80>
   ServerName static.szkolaczytania.org.pl
-  ServerAlias www.szkolaczytania.org.pl
-  ServerAlias szkolaczytania.org.pl
   DocumentRoot /var/www/szcz/
 
 <Directory /var/www/szcz/>
