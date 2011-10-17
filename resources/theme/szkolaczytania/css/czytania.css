@@ -149,6 +149,10 @@ li{margin-left:2em}
     margin-bottom:0.5em;
     line-height: 1.5em;
 }
+#content-core li {
+  margin-left: 0;
+}
+
 
 /*** PLONE invisibles styles ***/
 /* List classes without markers */
@@ -431,6 +435,9 @@ ol.visualNoMarker {
 }
 .portletFooter {
     padding-top: 0.5em;
+}
+.newsDate {
+  float: right;
 }
     
 /** homepage **/
@@ -766,9 +773,9 @@ h4.calendarMonth #calendar-next {
     font-weight: bold;
     display: inline;
 }
-#footer-portlets .portletCollectionEvents .itemInfos {
+/*#footer-portlets .portletCollectionEvents .itemInfos {
     display: inline;
-}
+}*/
 #footer-portlets .portletCollectionEvents .itemContent {
     margin-left: 7em;
     padding:0;
@@ -851,7 +858,6 @@ h4.calendarMonth #calendar-next {
 #portal-colophon .copyright {
     background: transparent url(../images/logo_mini.png) no-repeat left center;
     padding-left: 110px;
-    width: 350px;
     margin-left:0;
     margin-right: 20px;
     font-size: 1.1em;
@@ -908,10 +914,12 @@ a.followTW {
 }
 
 /** Logos **/
-.logo-patrons {
+.logo-patrons
+{
     text-align: center;
 }
-a.logos {
+a.logos,
+.technology a{
     display: inline-block;
     margin: 0 3px;
     vertical-align: middle;
@@ -1069,6 +1077,9 @@ a.logoB img {
     top: 20px;
     left: -18px;
 }
+div#carousel-mini div.bookClipTalk {
+  display: none;
+}
 h6.bookAuthor {
    color: #f5d698;
    font-family: 'Lato', Helvetica, Arial, sans-serif;
@@ -1079,7 +1090,7 @@ h6.bookAuthor {
    padding-left: 22px;
 }
 #carousel-mini h6.bookAuthor {
-    padding-left:0;
+    padding-left:1em;
     font-size: 1.3em;
 }
 .feather {
@@ -1195,3 +1206,12 @@ div.portalMessage{
     padding: 0.5em 0.75em;
 }
 
+div.book-authors {
+  margin-bottom: 2em;
+}
+
+div.canonItemListing {
+  clear: both;
+  margin: 2em 0;
+
+}
