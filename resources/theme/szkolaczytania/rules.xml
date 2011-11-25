@@ -40,7 +40,7 @@
     </replace>
 
     <!-- only portlet page stuff /home page/ -->
-    <rules css:if-content="body.section-strona-glowna">
+    <rules css:if-content="body.section-strona-glowna ">
       <copy css:content-children='#portal-column-content div#content' theme='//*[@id="portal-column-content"]'/>
       <drop css:content="h1.documentFirstHeading" />
       <replace css:content="#portal-column-content div div dl">
@@ -54,7 +54,7 @@
     </rules>
 
     <!-- only portlet stuff on /articles/ -->
-    <rules css:if-content="body.section-artykuly">
+    <rules css:if-content="body.portaltype-portlet-page.section-artykuly">
       <copy css:content-children='#portal-column-content div#content' theme='//*[@id="portal-column-content"]'/>
       <replace css:content="#portal-column-content div div dl">
         <xsl:for-each css:select="dl">
