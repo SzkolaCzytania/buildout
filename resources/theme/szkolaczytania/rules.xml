@@ -5,7 +5,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     css:if-content="#visual-portal-wrapper">
 
-    <theme href="home.html" css:if-content="body.portaltype-portlet-page"/>
+    <theme href="home.html" css:if-content="body.section-strona-glowna"/>
     <theme href="page_2_columns.html"/>
 
     <notheme if-path="presentation_view"/>
@@ -40,7 +40,7 @@
     </replace>
 
     <!-- only portlet page stuff /home page/ -->
-    <rules css:if-content="body.portaltype-portlet-page">
+    <rules css:if-content="body.section-strona-glowna">
       <copy css:content-children='#portal-column-content div#content' theme='//*[@id="portal-column-content"]'/>
       <drop css:content="h1.documentFirstHeading" />
       <replace css:content="#portal-column-content div div dl">
