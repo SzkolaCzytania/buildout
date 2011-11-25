@@ -53,6 +53,17 @@
       <copy css:content-children='div.carousel div.items div.itemPadding' css:theme='div#carousel div.items' />
     </rules>
 
+    <!-- only portlet stuff on /articles/ -->
+    <rules css:if-content="body.section-artykuly">
+      <copy css:content-children='#portal-column-content div#content' theme='//*[@id="portal-column-content"]'/>
+      <replace css:content="#portal-column-content div div dl">
+        <xsl:for-each css:select="dl">
+            <xsl:copy-of select="." />
+            <hr class="blocksSep" />
+        </xsl:for-each>
+      </replace>
+    </rules>
+
     <!-- carousel -->
     <copy css:content-children='div.carousel div.items div.itemPadding' css:theme='div#carousel-mini div.items' />
 
