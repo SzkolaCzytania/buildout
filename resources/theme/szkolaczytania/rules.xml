@@ -90,18 +90,18 @@
     <copy css:content-children='dl.portletEvents' css:theme='dl.portletCollectionEvents' />
     <copy css:content-children='dl.portletSearch' css:theme='dl.portletSearch' />
 
-    <!-- newsletter -->
+    <!-- newsletter
     <copy attributes="action method" css:content='dl.portlet-dancing form' css:theme="dl.portletNewsletter form" />
-
     <copy attributes="name value"
           content='//*/dl[@class="portlet portlet-dancing"]//*/input[@type="text"]'
           css:theme="dl.portletNewsletter input.newsletterField" />
     <copy attributes="name value"
           content='//*/dl[@class="portlet portlet-dancing"]//*/input[@type="submit"]'
           css:theme="dl.portletNewsletter input.newsletterButton" />
-
     <copy content='//*[@class="portlet portlet-dancing"]/dd[1]/div[1]' theme='//*[@class="portlet portletNewsletter grid_4"]/dd[1]/p' />
     <copy content='//*[@class="portlet portlet-dancing"]/dd[2]/span' theme='//*[@class="portlet portletNewsletter grid_4"]/dd[2]/p[1]' />
+    -->
+
     <!-- portal status message -->
     <before content='//*/dl[@class="portlet portlet-dancing"]//*/div[@class="portalMessage"]' theme-children='//*[@id="portal-column-content"]' />
 
