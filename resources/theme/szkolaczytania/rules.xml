@@ -17,9 +17,14 @@
 
     <replace theme="/html/head/title" content="/html/head/title"/>
     <replace theme="/html/head/base" content="/html/head/base" />
+    <after content="/html/head/meta" theme-children="/html/head" />
 
     <copy attributes="class" css:content="body" css:theme="body"/>
     <copy attributes="id dir" css:content="body" css:theme="body"/>
+
+    <!-- copy only social js -->
+    <after theme="/html/head/script[last()]" content="/html/head/script[contains(@src, 'plusone')]"/>
+    <after theme="/html/head/script[last()]" content="/html/head/script[contains(@src, 'facebook')]"/>
 
     <!-- copy only flowplayer css/js -->
     <after theme="/html/head/script[last()]" content="/html/head/script[contains(@src, 'player')]"/>
