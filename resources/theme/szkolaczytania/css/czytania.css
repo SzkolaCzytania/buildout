@@ -591,6 +591,30 @@ a.tagLink:hover {
    font-weight: bold;   
 }
 
+/** facebook **/
+#portletFacebook {
+margin-bottom: 2em;
+}
+#portletFacebook,
+#portletFacebook h4 {
+    color: #7a716e;
+}
+#portletFacebook a {
+    color: #006b78;
+}
+#portletFacebook a:hover {
+    color: #5A140C;
+}
+#portletFacebook .facebookHeader {
+    margin: 0 10px 0 0;
+    width: 180px;
+    padding-top: 0.2em;
+    text-align: right;
+    background: transparent url(../images/ico_facebook.png) no-repeat right center;
+    padding-right: 50px;
+}
+
+
 /** twitter **/
 #portlets-below {
     position: relative;
@@ -1214,4 +1238,29 @@ div.canonItemListing {
   clear: both;
   margin: 2em 0;
 
+}
+.cloud1 {
+	font-size: 1.0em;
+
+}
+.cloud2 {
+	font-size: 1.3em;
+}
+.cloud3 {
+	font-size: 1.6em;
+}
+.cloud4 {
+	font-size: 1.9em;
+}
+.cloud5 {
+	font-size: 2.2em;
+}
+.cloud6 {
+	font-size: 2.5em;
+}
+.cloud7 {
+	font-size: 2.8em;
+}
+.portletTagCloudPortlet{
+line-height: 1.9em;
 }

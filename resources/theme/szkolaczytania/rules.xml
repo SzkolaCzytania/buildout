@@ -76,7 +76,9 @@
     <drop css:content="div#portlets-above"/>
 
     <!-- left portlets -->
-    <replace content-children='//*[@id="portal-column-one"]/div/dl/dd' theme-children='//*[@id="portal-column-one"]' />
+    <replace content-children='//*[@id="portal-column-one"]/div' theme-children='//*[@id="portal-column-one"]' />
+
+    <drop css:content='dl.portlet-static-lewy-portlet dt'/>
 
     <!-- right portlets -->
     <replace content-children='//*[@id="portal-column-two"]' theme-children='//*[@id="portal-column-two"]' />
