@@ -1264,3 +1264,169 @@ div.canonItemListing {
 .portletTagCloudPortlet{
 line-height: 1.9em;
 }
+
+
+
+
+.documentFirstHeading .customer,
+h4 a .customer {
+	color: #3a3a3a;
+}
+
+h4 a:hover .customer {
+    color: black;
+}
+
+#content .projectKeywords ul,
+#content .projectKeywords ul li {
+	display: inline;
+	list-style: none none;
+	margin:0;
+} 
+#content .projectKeywords ul li {
+	margin: 0 0.5em 0 0;
+}
+#content .projectKeywords {
+	font-size: 0.95em;
+	padding: 0.3em 0.5em;
+	background-color: #EFEFEF;
+	border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.photoPortfolio {
+	margin: 1em 0;
+}
+.AdditionalImages {
+	background-color:#EFEFEF;
+	float:right;
+	margin:0 0 1em 1em;
+}
+.AdditionalImages img {
+	border: 4px solid #FFF;
+	margin: 10px;
+}
+.projectLeft {
+	clear: both;
+	float: left;
+	width: 48%;
+	margin: 0.5em 0;
+}
+.projectRight {
+    float: right;
+	width: 48%;
+	margin: 0.5em 0;
+}
+ 
+#sliderPortfolio {
+	height:80em;
+	margin:0 auto;
+	position:relative;
+	width:690px;
+}
+#sliderPortfolio  .wrapper {
+    height:100%;
+    left:0;
+    margin:0;
+    overflow:auto;
+    position:relative;
+    top:0;
+    width:690px;
+}
+#sliderPortfolio .wrapper ul { 
+    width: 32700px; 
+	list-style: none none; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	margin: 0; 
+}
+#sliderPortfolio .wrapper ul li {
+	display: block; 
+	float: left; 
+	padding: 0; 
+	height: 100%; 
+	width: 690px; 
+	margin: 0; 
+}
+
+#sliderPortfolio ul.prevnext {
+    display: none;
+}
+#sliderPortfolio .thumbNav {
+	position:absolute;
+	top: -3.3em;
+	right: 1em;
+}
+#sliderPortfolio .thumbNav ul li {
+	display: inline;
+	list-style: none none;
+	margin: 0 0.3em;
+}
+#sliderPortfolio .thumbNav ul li a {
+	background-color: #FBE9BB;
+	color: #500F03;
+	padding: 0.3em 0.5em;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+#content #sliderPortfolio .thumbNav ul li a.cur,
+#content #sliderPortfolio .thumbNav ul li a:hover,
+#content #sliderPortfolio .thumbNav ul li a:focus {
+    background-color: #500F03;
+    color: #FFF !important;
+}
+#sliderPortfolio .wrapper .projectKeywords ,
+#searchPortfolio .projectKeywords {
+	padding: 0 0.5em;
+	font-size: 0.9em;
+	margin: 0.5em 0;
+}
+#sliderPortfolio .wrapper .projectKeywords ul,
+#searchPortfolio .projectKeywords ul {
+	list-style:none none;
+	margin:0;
+	position:static;	
+	display: inline;
+	width:auto;
+}
+#sliderPortfolio .wrapper .projectKeywords ul li,
+#searchPortfolio .projectKeywords ul li {
+	display: inline;
+	list-style: none none;
+	margin: 0 0.4em;
+	float: none;
+	width: auto;
+	height: auto;
+}
+.portfolioProjectDescription img {
+	margin: 0.3em 1em 0.2em 0;
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+#searchPortfolio {
+	position: relative;
+}
+#searchPortfolio div.listingBar  {
+    position:absolute;
+    top: -4.8em;
+    right: 1em;
+	font-size: 0.95em;
+	line-height: 1.3em;
+}
+#searchPortfolio div.listingBar a,
+#searchPortfolio div.listingBar span.current  {
+	background-color: #500F03;
+    color: #FFF;
+    padding: 0.3em 0.5em;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+	margin: 0 0.1em;
+}
+#searchPortfolio div.listingBar a:hover,
+#searchPortfolio div.listingBar a:focus,
+#searchPortfolio div.listingBar span.current {
+    color: #FFF !important;
+}
