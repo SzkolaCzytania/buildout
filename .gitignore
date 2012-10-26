@@ -7,3 +7,4 @@ eggs
 lib
 include
 src/*
+etc/*
