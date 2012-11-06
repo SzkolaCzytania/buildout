@@ -26,7 +26,7 @@ CREATE TABLE content (
 	excludefromnav BOOLEAN, 
 	PRIMARY KEY (content_id), 
 	FOREIGN KEY(container_id) REFERENCES content (content_id) ON DELETE CASCADE, 
-	CHECK (excludefromnav IN (false, true))
+	CHECK (excludefromnav IN (False, True))
 );
 
 CREATE INDEX content_modification_date_idx ON content (modification_date);
@@ -40,6 +40,22 @@ CREATE TABLE relations (
 	PRIMARY KEY (source_id, target_id, relationship), 
 	FOREIGN KEY(source_id) REFERENCES content (content_id) ON DELETE CASCADE, 
 	FOREIGN KEY(target_id) REFERENCES content (content_id) ON DELETE CASCADE
+);
+
+CREATE TABLE canon (
+	content_id INTEGER NOT NULL, 
+	text TEXT, 
+	PRIMARY KEY (content_id), 
+	FOREIGN KEY(content_id) REFERENCES content (content_id) ON DELETE CASCADE
+);
+
+CREATE TABLE person (
+	content_id INTEGER NOT NULL, 
+	biography TEXT, 
+	biography_lead TEXT, 
+	years TEXT, 
+	PRIMARY KEY (content_id), 
+	FOREIGN KEY(content_id) REFERENCES content (content_id) ON DELETE CASCADE
 );
 
 CREATE TABLE files (
@@ -58,15 +74,6 @@ CREATE TABLE files (
 
 CREATE UNIQUE INDEX files_idx ON files (content_id, attribute);
 
-CREATE TABLE person (
-	content_id INTEGER NOT NULL, 
-	biography TEXT, 
-	biography_lead TEXT, 
-	years TEXT, 
-	PRIMARY KEY (content_id), 
-	FOREIGN KEY(content_id) REFERENCES content (content_id) ON DELETE CASCADE
-);
-
 CREATE TABLE book (
 	content_id INTEGER NOT NULL, 
 	constraintypesmode INTEGER, 
@@ -80,6 +87,6 @@ CREATE TABLE book (
 	nextpreviousenabled BOOLEAN, 
 	PRIMARY KEY (content_id), 
 	FOREIGN KEY(content_id) REFERENCES content (content_id) ON DELETE CASCADE, 
-	CHECK (nextpreviousenabled IN (false, true))
+	CHECK (nextpreviousenabled IN (False, True))
 );
 
