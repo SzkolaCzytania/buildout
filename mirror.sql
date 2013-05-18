@@ -33,6 +33,21 @@ CREATE INDEX content_modification_date_idx ON content (modification_date);
 
 CREATE UNIQUE INDEX content_content_uid_idx ON content (content_uid);
 
+CREATE TABLE person (
+	content_id INTEGER NOT NULL, 
+	biography TEXT, 
+	biography_lead TEXT, 
+	years TEXT, 
+	PRIMARY KEY (content_id), 
+	FOREIGN KEY(content_id) REFERENCES content (content_id) ON DELETE CASCADE
+);
+
+CREATE TABLE atimage (
+	content_id INTEGER NOT NULL, 
+	PRIMARY KEY (content_id), 
+	FOREIGN KEY(content_id) REFERENCES content (content_id) ON DELETE CASCADE
+);
+
 CREATE TABLE relations (
 	source_id INTEGER NOT NULL, 
 	target_id INTEGER NOT NULL, 
@@ -42,18 +57,18 @@ CREATE TABLE relations (
 	FOREIGN KEY(target_id) REFERENCES content (content_id) ON DELETE CASCADE
 );
 
-CREATE TABLE canon (
+CREATE TABLE atbtreefolder (
 	content_id INTEGER NOT NULL, 
-	text TEXT, 
+	constraintypesmode INTEGER, 
+	locallyallowedtypes TEXT, 
+	immediatelyaddabletypes TEXT, 
 	PRIMARY KEY (content_id), 
 	FOREIGN KEY(content_id) REFERENCES content (content_id) ON DELETE CASCADE
 );
 
-CREATE TABLE person (
+CREATE TABLE canon (
 	content_id INTEGER NOT NULL, 
-	biography TEXT, 
-	biography_lead TEXT, 
-	years TEXT, 
+	text TEXT, 
 	PRIMARY KEY (content_id), 
 	FOREIGN KEY(content_id) REFERENCES content (content_id) ON DELETE CASCADE
 );
@@ -74,6 +89,17 @@ CREATE TABLE files (
 
 CREATE UNIQUE INDEX files_idx ON files (content_id, attribute);
 
+CREATE TABLE atfolder (
+	content_id INTEGER NOT NULL, 
+	constraintypesmode INTEGER, 
+	locallyallowedtypes TEXT, 
+	immediatelyaddabletypes TEXT, 
+	nextpreviousenabled BOOLEAN, 
+	PRIMARY KEY (content_id), 
+	FOREIGN KEY(content_id) REFERENCES content (content_id) ON DELETE CASCADE, 
+	CHECK (nextpreviousenabled IN (False, True))
+);
+
 CREATE TABLE book (
 	content_id INTEGER NOT NULL, 
 	constraintypesmode INTEGER, 
@@ -90,3 +116,8 @@ CREATE TABLE book (
 	CHECK (nextpreviousenabled IN (False, True))
 );
 
+CREATE TABLE atfile (
+	content_id INTEGER NOT NULL, 
+	PRIMARY KEY (content_id), 
+	FOREIGN KEY(content_id) REFERENCES content (content_id) ON DELETE CASCADE
+);

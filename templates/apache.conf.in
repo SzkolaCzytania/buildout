@@ -23,7 +23,7 @@
 
 </VirtualHost>
 
-<VirtualHost *:80>
+<VirtualHost *:80 *:443>
   ServerName admin.szkolaczytania.org.pl
 
   DocumentRoot /var/www/
@@ -32,12 +32,19 @@
 
   RewriteEngine On
   ProxyRequests Off
+  SSLEngine on
+  SSLProxyEngine On
+  SSLCertificateFile /etc/apache2/ssl/1368306.cert
+  SSLCertificateKeyFile /etc/apache2/ssl/1368306.key
+  SetEnvIf User-Agent ".*MSIE.*" nokeepalive ssl-unclean-shutdown
 
   <Proxy http://${varnish:bind}/*>
     Order deny,allow
     Deny from all
     Allow from all
   </Proxy>
+  RewriteCond %{HTTPS} off
+  RewriteRule ^/$ https://%{SERVER_NAME}/ [R]
 
   RewriteCond %{HTTP_COOKIE} !__ac=.*
   RewriteCond %{REQUEST_URI} !^/acl_users/credentials_cookie_auth/require_login$
@@ -54,7 +61,7 @@
   RewriteCond %{REQUEST_URI} !^/pwreset_form$
   RewriteCond %{REQUEST_URI} !^/pwreset_finish$
   RewriteRule ^(.*) /acl_users/credentials_cookie_auth/require_login?came_from=%{REQUEST_URI} [last,redirect=temp]
-  RewriteRule ^/(.*)$  http://${varnish:bind}/VirtualHostBase/http/%{SERVER_NAME}:80/szcz/VirtualHostRoot/$1 [L,P]
+  RewriteRule ^/(.*)$  http://${varnish:bind}/VirtualHostBase/https/%{SERVER_NAME}:443/szcz/VirtualHostRoot/$1 [L,P]
   ProxyPassReverse / http://${varnish:bind}/
 
 </VirtualHost>
