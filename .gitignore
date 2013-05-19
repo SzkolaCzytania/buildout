@@ -1,5 +1,7 @@
 parts
+local
 develop-eggs
+var/*
 bin
 eggs
 buildout.cfg

@@ -4,8 +4,8 @@
   ServerAlias testing.szkolaczytania.org.pl
 
   DocumentRoot /var/www/
-  CustomLog "|/usr/local/sbin/cronolog --symlink=/var/log/apache2/http-szcz-access.log /var/log/apache2/%Y/%m/%d/http-szcz-access.log" combined
-  ErrorLog  "|/usr/local/sbin/cronolog --symlink=/var/log/apache2/http-szcz-error.log  /var/log/apache2/%Y/%m/%d/http-szcz-error.log"
+  CustomLog /var/log/apache2/www.szkolaczytania.org.pl-access.log combined
+  ErrorLog  /var/log/apache2/www.szkolaczytania.org.pl-error.log
 
   RewriteEngine On
   ProxyRequests Off
@@ -27,8 +27,8 @@
   ServerName admin.szkolaczytania.org.pl
 
   DocumentRoot /var/www/
-  CustomLog "|/usr/local/sbin/cronolog --symlink=/var/log/apache2/http-admin-szcz-access.log /var/log/apache2/%Y/%m/%d/http-szcz-access.log" combined
-  ErrorLog  "|/usr/local/sbin/cronolog --symlink=/var/log/apache2/http-admin-szcz-error.log  /var/log/apache2/%Y/%m/%d/http-szcz-error.log"
+  CustomLog /var/log/apache2/admin.szkolaczytania.org.pl-access.log combined
+  ErrorLog  /var/log/apache2/admin.szkolaczytania.org.pl-error.log
 
   RewriteEngine On
   ProxyRequests Off
